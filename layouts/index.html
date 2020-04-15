@@ -5,15 +5,8 @@
     <section class="cd-hero">
       <span class="cd-hero-content">Hamataku</span>
       <span class="cd-hero-content2">Lab</span>
-    </section> <!-- .cd-hero -->
+    </section>
 
-    <nav class="cd-secondary-nav">
-    	<ul>
-    		<li><a class="active" href="#0">Intro</a></li>
-    		<li><a href="#0">Features</a></li>
-    		<li><a href="#0">Photos</a></li>
-    	</ul>
-    </nav> <!-- .cd-secondary-nav -->
 
     <article>
       <div class="container">
@@ -25,37 +18,67 @@
           <div class="col-12 col-sm-6 first h100 d-flex align-items-center justify-content-center">
             <div class="text-center">
               <p class="h1"><b>Hamataku</b></p><br>
-              <p>東京大学理科一類。<br>プログラミングとか電子工作とか音楽を広く浅く。</p>
+              <p>東京大学理科一類。<br>プログラミング、電子工作、音楽を広く浅く。</p>
             </div>
           </div>
         </div>
+
         <div class="row">
           <div class="col-10 offset-1">
             {{ .Content }}
           </div>
         </div>
+
       </div>
     </article>
+
     <br>
     <br>
+
     <article>
       <div class="container">
         <div class="row">
-          <div class="col-12">
-            <p class="h1"><b><a href="/post/">Blog</a></b></p>
-            <div class="row">
-              {{ $posts := or .Site.Params.PostSummariesFrontPage 4 }}
-              {{ range first $posts (where .Data.Pages "Type" "post") }}
-                  {{ .Render "summary"}}
-              {{ end }}
+          <div class="col-6 offset-3 col-sm-6 offset-sm-0 text-center h100 d-flex align-items-center justify-content-center">
+            <div class="text-center">
+              <p class="h1"><b>自己紹介</b></p>
             </div>
-            <!-- Pager -->
-            <ul class="pager">
-              <li class="next">
-                <a href="{{ .Site.BaseURL }}/post/">過去の記事 &rarr;</a>
-              </li>
-            </ul>
+          </div>
+          <div class="col-12 col-sm-6 first h100 d-flex align-items-center justify-content-center">
+            <div class="text-center">
+              <p>昔からモノを作るのが好きで、電気に関係するものなら何でも興味があります。</p>
+              <a href="/page/introduction"><button type="button" class="btn btn-outline-dark btn-lg"><p class="h3"> Introduction </p></button></a>
+            </div>
           </div>
         </div>
     </article>
+
+    <br>
+    <br>
+
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-6 offset-3 col-sm-6 offset-sm-0 text-center h100 d-flex align-items-center justify-content-center">
+            <div class="text-center">
+              <p class="h1"><b>電気<i class="fas fa-bolt"></i>ブログ書いてます</b></p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 first h100 d-flex align-items-center justify-content-center">
+            <div class="text-center">
+              <p>電子工作とか、プログラミングに関することをいろいろ書いています。<br>たまに関係ないこと書くかも。</p>
+              <a href="/post/"><button type="button" class="btn btn-outline-dark btn-lg"><p class="h3"> Blog </p></button></a>
+            </div>
+          </div>
+        </div>
+    </article>
+
+    <nav class="cd-secondary-nav">
+    	<ul>
+    		<li><a class="active" href="/">Home</a></li>
+    		<li><a href="/page/introduction">Intro</a></li>
+    		<li><a href="/post">Blog</a></li>
+        <li><a href="/page/contact">Contact</a></li>
+    	</ul>
+    </nav>
+
 {{ partial "footer.html" .}}

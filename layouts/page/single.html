@@ -1,69 +1,60 @@
 {{ partial "header.html" .}}
-
-    <!-- Page Header -->
-    <!-- Set your background image for this header on the line below. -->
-    {{ if isset .Params "image" }}<header class="intro-header" style="background-image: url('{{ .Site.BaseURL }}/{{ .Params.image }}')">
-      {{ else }}<header class="intro-header" style="background-image: url('{{ .Site.BaseURL }}/img/emc.jpeg')">
-    {{ end }}
+    <div class="post-intro">
       <div class="container">
         <div class="row">
-           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-             <div class="site-heading">
+           <div class="col-10 offset-1">
+             <div class="post-heading">
                <h1>{{ .Title }}</h1>
-               <hr class="small">
-               <span class="subheading">{{ .Description }}</span>
+               <br>
+               <h2>{{ .Description }}</h2>
              </div>
            </div>
         </div>
       </div>
-    </header>
+    </div>
 
     <!-- Post Content -->
-    <article>
+    <div class="cd-main-content">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-lg-offset-0 col-md-10 col-md-offset-1">
-                  <!-- 部員表示　ここから -->
-                  {{ if eq .File.TranslationBaseName "introduction" }}
-                    <h2>部員</h2>
-                    {{ $tagmap := .Site.Taxonomies.tags}}
-                    {{ range $val := seq 200 -1 90 }}
-                      {{ $name := (print $val "回生")}}
-                      {{ with index $tagmap $name }}
-                        {{ $taxonomy := index $tagmap $name}}
-                        <div onclick="obj=document.getElementById('{{ $name }}').style; obj.display=(obj.display=='none')?'block':'none';">
-                        <a style="cursor:pointer;">
-                          <font size="6" color=#3b75b7>
-                            <u>●{{ $name }}{{if ge (sub (int (now.Format "2006")) $val) 1919}}(引退){{ end }}</u></font></a>
-                        </div>
+                <div class="col-10 offset-1">
+                  {{ if isset .Params "math" }}
+                      {{ if eq .Params.math true }}
+                          {{ .Content | replaceRE ".begin{(.+)}" "<div class=\"h-scroll\">\\begin{$1}" | replaceRE ".end{(.+)}" "\\end{$1} </div>" | replaceRE "<p>\\$\\$" "<p><div class=\"h-scroll\">$$$$"| replaceRE "\\$\\$</p>" "$$$$</div></p>" | replaceRE "<img src=\"(.+)\\.(png|jpeg|jpg|gif|PNG|JPG|JPEG|GIF)\" alt=\"(.*)\" title=\"(.*)\"" "<img src=\"$1.$2\" alt=\"$3\" style=\"width: $4%\"" | safeHTML}}
+                      {{else}}
+                          {{ .Content | replaceRE "<img src=\"(.+)\\.(png|jpeg|jpg|gif|PNG|JPG|JPEG|GIF)\" alt=\"(.*)\" title=\"(.*)\"" "<img src=\"$1.$2\" alt=\"$3\" style=\"width: $4%\"" | safeHTML}}
+                      {{end}}
+                  {{ else }}
+                      {{ .Content | replaceRE "<img src=\"(.+)\\.(png|jpeg|jpg|gif|PNG|JPG|JPEG|GIF)\" alt=\"(.*)\" title=\"(.*)\"" "<img src=\"$1.$2\" alt=\"$3\" style=\"width: $4%\"" | safeHTML}}
+                  {{end}}
 
-                        <div id="{{ $name }}" style="display:none;clear:both;">
-                        {{ range $taxonomy.Pages }}
-                            {{ if .Params.Mypage }}
-                              <a href="{{ .Permalink}}" style="color:blue;text-decoration:none;">
-                            {{ end }}
-                            <h3>　● {{ if .Params.Mypage }}<u>{{ end }}{{ .Params.Title }}
-                            {{ if ne .Params.Description "" }}
-                              ({{ .Params.Description }})
-                            {{ end }}
-                            {{ if .Params.Mypage }}</u>{{ end }}
-                            </h3>
-                            {{ if .Params.Mypage }}
-                              </a>
-                            {{ end }}
-                          {{ end }}
-                        </div>
-                      {{ end }}
-                    {{ end }}
-                  {{ end }}
-                  <!-- 部員表示　ここまで -->
-
-                  <br>
-                  {{ .Content }}
                   {{ partial "comments.html" .}}
+
                 </div>
             </div>
         </div>
-    </article>
+    </div>
+
+    <nav class="cd-secondary-nav">
+    	<ul>
+    		<li><a href="/">Home</a></li>
+        {{ if isset .Params "intro" }}
+          {{ if eq .Params.intro true }}
+      		  <li><a class="active" href="/page/introduction">Intro</a></li>
+          {{ else }}
+            <li><a href="/page/introduction">Intro</a></li>
+          {{ end }}
+        {{ end }}
+    		<li><a href="/post">Blog</a></li>
+        {{ if isset .Params "intro" }}
+          {{ if eq .Params.intro true }}
+      		  <li><a href="/page/contact">Contact</a></li>
+          {{ else }}
+            <li><a class="active" href="/page/contact">Contact</a></li>
+          {{ end }}
+        {{ end }}
+    	</ul>
+    </nav>
+
 
 {{ partial "footer.html" .}}

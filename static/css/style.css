@@ -19,10 +19,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1{
-
-}
-
 a {
   color:#0066c0;
   text-decoration: none;
@@ -47,11 +43,92 @@ p{
 }
 
 footer{
-  margin-top: 20px;
-  margin-bottom: 20px;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgba(202, 182, 74,0.5);
+  z-index: 1;
 }
 
 
+#paging {
+  margin: 25px;
+  text-align: center;
+}
+#paging ul {
+  padding: 0;
+}
+#paging i {
+  font-weight: bold;
+}
+#paging .not-allow i {
+  font-weight: normal;
+  opacity: 0.3;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  list-style: none;
+  border-radius: .25rem;
+}
+.pagination li {
+  flex: 1 1 42px;
+  max-width: 42px;
+  min-width: 27px;
+  float: left;
+}
+
+.pagination > li > a {
+  display: inline-block;
+  width: 100%;
+  padding: 6px 0;
+  color: inherit;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-right: 0;
+}
+.pagination > li:last-child > a,
+.pagination > .not-allow:first-child > a:hover {
+  border-right: 1px solid #ddd;
+}
+.pagination > .active > a,
+.pagination > li > a:hover {
+  color: #fff;
+  background: #dc143c;
+}
+.pagination > .active > a:hover,
+.pagination > .not-allow > a:hover {
+  cursor: text;
+}
+.post #paging {
+  margin: 20px 0 40px 0;
+}
+
+/* --------------------------------
+
+post-single
+
+-------------------------------- */
+.post-intro{
+  padding-top: 100px;
+  background-color: skyblue;
+  padding-bottom: 30px;
+}
+.post-intro .post-heading h1{
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
+.post-intro .post-heading h2{
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+.post-intro .post-heading .meta{
+  color: white;
+
+}
 
 /* --------------------------------
 
@@ -407,7 +484,7 @@ footer{
 .cd-secondary-nav a:hover, .cd-secondary-nav a.active {
   opacity: 1;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 100px) {
   .cd-secondary-nav {
     height: 70px;
     overflow: visible;
@@ -446,7 +523,7 @@ footer{
       -ms-transform: translateY(-60px);
           transform: translateY(-60px);
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 100px) {
   .cd-secondary-nav.fixed {
     top: 80px;
     /* fixes a bug where nav and subnab move with a slight delay */
@@ -483,8 +560,39 @@ Main content
   max-width: 1024px;
   line-height: 1.6;
   margin: 2em auto;
-  font-family: "David Libre", serif;
-  color: #a5a8a9;
+  color: black;
+}
+.cd-main-content h1{
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.cd-main-content h2{
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 24px;
+  position: relative;
+  padding: 8px 16px;
+  background: #d14;
+  border-radius: 8px;
+}
+.cd-main-content h2::before{
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 30px;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-top: 8px solid #d14;
+}
+.cd-main-content h3{
+  font-size: 20px;
+  font-weight: bold;
+}
+.cd-main-content h4{
+  font-size: 15px;
 }
 @media only screen and (min-width: 1024px) {
   .cd-main-content {

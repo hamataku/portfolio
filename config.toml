@@ -39,7 +39,7 @@ post  = "/:section/:filename/"
 
 [[params.social]]
   title = "github"
-  url = "https://github.com/hamataku/portfolio"
+  url = "https://github.com/hamataku"
 [[params.social]]
     title = "twitter"
     url = "https://twitter.com/Warapen4"
