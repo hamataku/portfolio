@@ -1,7 +1,7 @@
 baseurl = "https://hamataku.netlify.com"
 title = "Hamataku Lab"
 canonifyurls = true
-paginate = 6
+paginate = 8
 languageCode = "ja-jp"
 copyright = "© 2020- Hamataku Lab. All Rights Reserved."
 googleAnalytics = "" # delete or comment to disable Google Analytics JS generation
@@ -31,7 +31,7 @@ post  = "/:section/:filename/"
 [params]
   DateForm = "2006/1/2"#変えるな絶対！！呪文やこれは！！
   email = "hamatakugarbage@gmail.com"
-  postSummariesFrontPage = 6 #Number of post summaries to show on front page, comment out to allow default(4)
+  postSummariesFrontPage = 4 #Number of post summaries to show on front page, comment out to allow default(4)
   showReadTime = false #set to false to exclude read time from header of post
 
 [taxonomies]

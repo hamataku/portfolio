@@ -44,10 +44,10 @@
     <article>
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+          <div class="col-12">
             <p class="h2"><a href="/post/">Blog</a></p>
             <div class="row">
-              {{ $posts := or .Site.Params.PostSummariesFrontPage 3 }}
+              {{ $posts := or .Site.Params.PostSummariesFrontPage 4 }}
               {{ range first $posts (where .Data.Pages "Type" "post") }}
                   {{ .Render "summary"}}
               {{ end }}
