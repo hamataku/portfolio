@@ -23,13 +23,10 @@
             <img src="/img/hamataku.JPG" alt="" class="img-fluid circle">
           </div>
           <div class="col-12 col-sm-6 first h100 d-flex align-items-center justify-content-center">
-            <div class="text-center">2020</div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-10 offset-1 text-center first">
-            <span>中央寄せ</span>
+            <div class="text-center">
+              <p class="h1"><b>Hamataku</b></p><br>
+              <p>東京大学理科一類。<br>プログラミングとか電子工作とか音楽を広く浅く。</p>
+            </div>
           </div>
         </div>
         <div class="row">
@@ -45,7 +42,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <p class="h2"><a href="/post/">Blog</a></p>
+            <p class="h1"><b><a href="/post/">Blog</a></b></p>
             <div class="row">
               {{ $posts := or .Site.Params.PostSummariesFrontPage 4 }}
               {{ range first $posts (where .Data.Pages "Type" "post") }}

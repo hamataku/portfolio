@@ -19,8 +19,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+h1{
+
+}
+
 a {
-  color: #8F3985;
+  color:#0066c0;
   text-decoration: none;
 }
 
