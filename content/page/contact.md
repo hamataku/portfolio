@@ -1,5 +1,5 @@
 ---
-title: Contacts
+title: Contact
 description: 連絡先
 intro: false
 
