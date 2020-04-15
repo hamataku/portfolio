@@ -1,0 +1,30 @@
+{{ partial "header.html" . }}
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="post-title">Blog</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="row">
+            {{ range .Paginator.Pages }}
+                {{ .Render "archive" }}
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          {{ template "_internal/pagination.html" . }}
+          <script async src="https://cse.google.com/cse.js?cx=015021849101661340119:xouinhkjqiv"></script>
+          <div class="gcse-search"></div>
+        </div>
+      </div>
+    </div>
+
+{{ partial "footer.html" . }}

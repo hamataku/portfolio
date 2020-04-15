@@ -1,0 +1,64 @@
+{{ partial "header.html" .}}
+    <!-- Main Content -->
+    <div class="particle" id="link_move"></div>
+
+    <section class="cd-hero">
+      <span class="cd-hero-content">Hamataku</span>
+      <span class="cd-hero-content2">Lab</span>
+    </section> <!-- .cd-hero -->
+
+    <nav class="cd-secondary-nav">
+    	<ul>
+    		<li><a class="active" href="#0">Intro</a></li>
+    		<li><a href="#0">Features</a></li>
+    		<li><a href="#0">Photos</a></li>
+    	</ul>
+    </nav> <!-- .cd-secondary-nav -->
+
+    <article>
+      <div class="container">
+
+        <div class="row">
+          <div class="col-6 offset-3 col-sm-6 offset-sm-0 text-center h100 d-flex align-items-center justify-content-center">
+            <img src="/img/hamataku.JPG" alt="" class="img-fluid circle">
+          </div>
+          <div class="col-12 col-sm-6 first h100 d-flex align-items-center justify-content-center">
+            <div class="text-center">2020</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-10 offset-1 text-center first">
+            <span>中央寄せ</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-10 offset-1">
+            {{ .Content }}
+          </div>
+        </div>
+      </div>
+    </article>
+    <br>
+    <br>
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+            <p class="h2"><a href="/post/">Blog</a></p>
+            <div class="row">
+              {{ $posts := or .Site.Params.PostSummariesFrontPage 3 }}
+              {{ range first $posts (where .Data.Pages "Type" "post") }}
+                  {{ .Render "summary"}}
+              {{ end }}
+            </div>
+            <!-- Pager -->
+            <ul class="pager">
+              <li class="next">
+                <a href="{{ .Site.BaseURL }}/post/">過去の記事 &rarr;</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </article>
+{{ partial "footer.html" .}}

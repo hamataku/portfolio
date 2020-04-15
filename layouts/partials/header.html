@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+    {{ if isset .Params "math" }}
+      {{ if eq .Params.math true }}
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+              tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+              linebreaks: {automatic: true}
+          });
+        </script>
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&locale=ja"></script>
+      {{end}}
+    {{ end }}
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{{ if .Description }}{{ .Description }}{{ end }}">
+    <meta name="keywords" content="{{ if .Params.tags }}{{ delimit .Params.tags ", " }}{{ end }}">
+
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link href="{{ "css/reset.css" | absURL }}" rel="stylesheet">
+    <link href="{{ "css/style.css" | absURL }}" rel="stylesheet">
+    <link href="{{ "css/syntax.css" | absURL }}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="//use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=David+Libre|Hind:400,700" rel="stylesheet">
+    <!--
+    <link rel="icon" href="{{ .Site.BaseURL }}/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}/favicon/apple-touch-icon.png" sizes="152x152">
+    <link rel="icon" href="{{ .Site.BaseURL }}/favicon/icon-192x192.png" sizes="192x192" type="image/png">
+    -->
+</head>
+
+<body>
+    <header class="cd-auto-hide-header">
+      <!-- Navigation -->
+      <div class="logo"><a href="/">Hamataku Lab</a></div>
+      <nav class="cd-primary-nav">
+    		<a href="#cd-navigation" class="nav-trigger">
+    			<span>
+    				<em aria-hidden="true"></em>
+    				Menu
+    			</span>
+    		</a> <!-- .nav-trigger -->
+
+    		<ul id="cd-navigation">
+    			<li><a href="/post">Blog</a></li>
+    			<li><a href="/page/introduction">Introduction</a></li>
+    			<li><a href="/page/contact">Contact</a></li>
+    		</ul>
+    	</nav> <!-- .cd-primary-nav -->
+    </header> <!-- .cd-auto-hide-header -->

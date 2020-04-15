@@ -1,0 +1,7 @@
+{{ if .Site.Params.ShowReadTime }}
+  A {{ .ReadingTime }} minute read,
+{{ end }}
+<div class="text-center">
+<i class="far fa-clock"></i>  {{ dateFormat (.Site.Params.DateForm | default "Mon, Jan 2, 2006") .Date }}　
+{{ partial "tags.html" .}}
+</div>

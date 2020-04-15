@@ -1,0 +1,13 @@
+{{ $related := .Site.RegularPages.Related . | first 6 }}
+{{ with $related }}
+<div id="js-slide">
+    {{ range . }}
+    <div class="item">
+      <a href="{{ .RelPermalink }}">
+        <img src="{{ .Site.BaseURL }}{{ .Params.image }}" class="slide" alt="" />
+      </a>
+    </div>
+    {{ end }}
+</div>
+
+{{ end }}

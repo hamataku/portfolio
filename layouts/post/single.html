@@ -1,0 +1,46 @@
+{{ partial "header.html" .}}
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    {{ if isset .Params "image" }}<header class="intro-header" style="background-image: url('{{ .Site.BaseURL }}/img/background/blue.jpg')">
+      {{ else }}<header class="intro-header" style="background-image: url('{{ .Site.BaseURL }}/img/emc.jpeg'')">
+    {{ end }}
+      <div class="container">
+        <div class="row">
+           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+             <div class="post-heading">
+               <h1>{{ .Title }}</h1>
+               <br>
+               <h2 class="subheading">{{ .Description }}</h2>
+               <span class="meta">
+                 {{ partial "meta.html" .}}
+               </span>
+             </div>
+           </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  {{ if isset .Params "math" }}
+                      {{ if eq .Params.math true }}
+                          {{ .Content | replaceRE ".begin{(.+)}" "<div class=\"h-scroll\">\\begin{$1}" | replaceRE ".end{(.+)}" "\\end{$1} </div>" | replaceRE "<p>\\$\\$" "<p><div class=\"h-scroll\">$$$$"| replaceRE "\\$\\$</p>" "$$$$</div></p>" | replaceRE "<img src=\"(.+)\\.(png|jpeg|jpg|gif|PNG|JPG|JPEG|GIF)\" alt=\"(.*)\" title=\"(.*)\"" "<img src=\"$1.$2\" alt=\"$3\" style=\"width: $4%\"" | safeHTML}}
+                      {{else}}
+                          {{ .Content | replaceRE "<img src=\"(.+)\\.(png|jpeg|jpg|gif|PNG|JPG|JPEG|GIF)\" alt=\"(.*)\" title=\"(.*)\"" "<img src=\"$1.$2\" alt=\"$3\" style=\"width: $4%\"" | safeHTML}}
+                      {{end}}
+                  {{ else }}
+                      {{ .Content | replaceRE "<img src=\"(.+)\\.(png|jpeg|jpg|gif|PNG|JPG|JPEG|GIF)\" alt=\"(.*)\" title=\"(.*)\"" "<img src=\"$1.$2\" alt=\"$3\" style=\"width: $4%\"" | safeHTML}}
+                  {{end}}
+
+                  {{ partial "comments.html" .}}
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+{{ partial "footer.html" .}}

@@ -1,0 +1,46 @@
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+            <ul class="list-inline text-center">
+              {{ with .Site.Params.email }}
+                <li class="list-inline-item list-margin">
+                  <a href="mailto:{{ . }}">
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+                </li>
+              {{ end }}
+              {{ if isset .Site.Params "social" }}
+                {{ range .Site.Params.social }}
+                <li class="list-inline-item">
+                  <a href="{{ .url }}">
+                    <span class="fa-stack fa-lg">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i class="fab fa-{{ .title }} fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+                </li>
+                {{ end }}
+              {{ end }}
+            </ul>
+            <p class="copyright">{{ .Site.Copyright }}<br>Code released under the Apache 2.0 license.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="{{ .Site.BaseURL }}js/main.js"></script>
+    <script src="{{ .Site.BaseURL }}js/particles.min.js"></script>
+    {{ template "_internal/google_analytics.html" . }}
+
+</body>
+
+</html>
