@@ -7,6 +7,7 @@ intro: true
 <img src="/img/hamataku.JPG" alt="" class="img-fluid circle">
 
 ## hamataku
+
 </div>
 <div class="animate">
 
