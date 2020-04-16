@@ -64,6 +64,11 @@ footer{
   opacity: 0.3;
 }
 
+.MathJax_Display{
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -146,7 +151,7 @@ post-single
   padding-bottom: 30px;
   border: solid 3px #6091d3;
   border-radius: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 .post-intro .post-heading h1{
   text-align: center;
