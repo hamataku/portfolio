@@ -15,7 +15,6 @@ body {
   color: #25283D;
   background-color: #ECF0F1;
   -webkit-font-smoothing: antialiased;
-  overscroll-behavior: none;
 }
 
 a {
@@ -216,14 +215,15 @@ post-single
           transform: translateY(-100%);
 }
 .fluffy {
-  animation: fluffy1 1s ease infinite;
+  animation: fluffy1 0.5s ease infinite;
 }
 @keyframes fluffy1 {
-    0% {transform: translate(0px, 0px) rotateZ(0deg)}
+    0% {transform: translate(0px, 0px) rotateZ(0deg);color:yellow;}
     25% {transform: translate(2px, 2px) rotateZ(1deg)}
     50% {transform: translate(0px, 2px) rotateZ(0deg)}
     75% {transform: translate(2px, 0px) rotateZ(-1deg)}
-    100% {transform: translate(0px, 0px) rotateZ(0deg)}
+    85% {transform: translate(2px, 0px) rotateZ(-1deg)}
+    100% {transform: translate(0px, 0px) rotateZ(0deg);color:black;}
 }
 
 @media only screen and (min-width: 1024px) {
@@ -480,7 +480,6 @@ post-single
   display: flex;
   padding: 0 5%;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
 }
 .cd-secondary-nav ul::after {
   clear: both;
