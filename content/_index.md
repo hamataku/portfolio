@@ -1,3 +1,4 @@
 ---
 title: トップページ
+particle: true
 ---

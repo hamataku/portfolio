@@ -39,7 +39,9 @@
     <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.0.3/scrollreveal.min.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="{{ "js/main.js" | absURL }}"></script>
+    {{ if isset .Params "particle"}}
     <script src="{{ "js/particles.min.js" | absURL }}"></script>
+    {{ end}}
     <script>window.sr = ScrollReveal({ delayType: 'onload' });sr.reveal( '.animate', {origin: 'bottom',scale:1.4});sr.reveal( '.animate-late', {origin: 'bottom',scale:1.4,delay:100,duration:500});sr.reveal( '.animate-card', {origin: 'bottom',scale:1.1,delay:100,duration:500});</script>
     {{ template "_internal/google_analytics.html" . }}
 
