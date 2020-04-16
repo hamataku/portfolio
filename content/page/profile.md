@@ -3,20 +3,22 @@ title: プロフィール
 intro: true
 # ファイル名はintroduction.md以外に変更しないで下さい！！！
 ---
+
 <div class="page-title text-center">
 <img src="/img/hamataku.JPG" alt="" class="img-fluid circle">
 
-## hamataku
+<h2>hamataku</h2>
 
 </div>
 <div class="animate">
 
-2001年生まれの18歳です。 **広く浅く** 色んなことに挑戦しています。
+2001年生まれの18歳です。 <strong>広く浅く</strong> 色んなことに挑戦しています。
 最近、自分のコードの書き方がガラパゴス化してる気がするので、わかりやすいコードを書く方法を大学生の間に学びたいと思っています。
 </div>
 <div class="animate">
 
-## 現在の所属
+<h2>現在の所属</h2>
+
 ・東京大学理科一類(教養学部)  
 ・[東京大学コンピュータサークルTSG](https://tsg.ne.jp/)  
 ・[東京大学ロボコンサークルRobotech](https://tuk.t.u-tokyo.ac.jp/robotech/)  
