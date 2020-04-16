@@ -640,7 +640,8 @@ Intro Section
   display: table;
   width: 100%;
   margin-top: 60px;
-  height: 300px;
+  height: 500px
+  top 200px;
   background-color: gray;
   background-size: cover;
   position: relative;
