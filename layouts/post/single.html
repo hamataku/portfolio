@@ -4,7 +4,7 @@
         <div class="row">
            <div class="col-12">
              <div class="site-title">
-                電気<i class="fas fa-bolt"></i>ブログ
+                電気<i class="fas fa-bolt fluffy"></i>ブログ
              </div>
            </div>
         </div>
@@ -12,7 +12,7 @@
     </div>
     <div class="container">
       <div class="row">
-         <div class="col-10 offset-1 post-intro">
+         <div class="col-12 col-md-8 offset-md-2 post-intro">
            <div class="post-heading">
              <h1>{{ .Title }}</h1>
              <br>
@@ -32,7 +32,7 @@
     <div class="cd-main-content">
         <div class="container">
             <div class="row">
-                <div class="col-10 offset-1">
+                <div class="col-12 col-md-8 offset-md-2">
                   {{ if isset .Params "math" }}
                       {{ if eq .Params.math true }}
                           {{ .Content | replaceRE ".begin{(.+)}" "<div class=\"h-scroll\">\\begin{$1}" | replaceRE ".end{(.+)}" "\\end{$1} </div>" | replaceRE "<p>\\$\\$" "<p><div class=\"h-scroll\">$$$$"| replaceRE "\\$\\$</p>" "$$$$</div></p>" | replaceRE "<img src=\"(.+)\\.(png|jpeg|jpg|gif|PNG|JPG|JPEG|GIF)\" alt=\"(.*)\" title=\"(.*)\"" "<img src=\"$1.$2\" alt=\"$3\" style=\"width: $4%\"" | safeHTML}}

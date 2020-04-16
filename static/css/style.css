@@ -215,7 +215,21 @@ post-single
       -ms-transform: translateY(-100%);
           transform: translateY(-100%);
 }
+.fluffy {
+  animation: fluffy1 1s ease infinite;
+}
+@keyframes fluffy1 {
+    0% {transform: translate(0px, 0px) rotateZ(0deg)}
+    25% {transform: translate(2px, 2px) rotateZ(1deg)}
+    50% {transform: translate(0px, 2px) rotateZ(0deg)}
+    75% {transform: translate(2px, 0px) rotateZ(-1deg)}
+    100% {transform: translate(0px, 0px) rotateZ(0deg)}
+}
+
 @media only screen and (min-width: 1024px) {
+  .post-top{
+    padding-top: 125px;
+  }
   .cd-auto-hide-header {
     height: 80px;
   }
@@ -520,7 +534,7 @@ post-single
 }
 
 iframe{
-  width:100%
+  width:100%;
 }
 
 /* --------------------------------
@@ -552,7 +566,7 @@ iframe{
 Main content
 -------------------------------- */
 .cd-main-content {
-  padding: 60px 5% 2em;
+  padding: 0px 3% 2em;
   overflow: hidden;
 }
 .cd-main-content.sub-nav {
@@ -587,6 +601,7 @@ Main content
   background: #d14;
   border-radius: 8px;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 .cd-main-content h2::before{
   content: "";
@@ -625,17 +640,11 @@ Main content
 	border-color: transparent transparent transparent #3F51B5;
 }
 @media only screen and (min-width: 1024px) {
-  .cd-main-content {
-    padding-top: 80px;
-  }
   .cd-main-content.sub-nav {
     padding-top: 150px;
   }
   .cd-main-content.sub-nav-hero.secondary-nav-fixed {
     margin-top: 70px;
-  }
-  .cd-main-content p {
-
   }
 }
 
