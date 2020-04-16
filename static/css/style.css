@@ -106,6 +106,25 @@ footer{
 /* --------------------------------
 post-single
 -------------------------------- */
+
+.profile{
+  padding: 10px;
+  border-radius: 7px;
+  margin-top: 18px;
+  margin-bottom: 30px;
+  background-color: white;
+}
+.pro-h2{
+  font-size: 20px;
+  font-weight: bold;
+  padding: 3px;
+}
+.pro-h3{
+  font-size: 15px;
+  font-weight: bold;
+  padding: 3px;
+}
+
 .post-top{
   padding-top: 100px;
   background-image: url("/img/board.jpg");
@@ -116,6 +135,8 @@ post-single
   font-size: 50px;
   color: yellow;
   text-align: center;
+  font-family: "Hind", sans-serif;
+  font-weight: bold;
 }
 
 .post-intro{
@@ -124,6 +145,7 @@ post-single
   padding-bottom: 30px;
   border: solid 3px #6091d3;
   border-radius: 10px;
+  margin-bottom: 50px;
 }
 .post-intro .post-heading h1{
   text-align: center;
@@ -164,6 +186,10 @@ post-single
   font-family: "Hind", sans-serif;
   font-size: 18px;
   text-align: center;
+}
+.card-text{
+  padding: 5px;
+  font-size: 13px;
 }
 
 .particle{
@@ -215,7 +241,7 @@ post-single
           transform: translateY(-100%);
 }
 .fluffy {
-  animation: fluffy1 0.5s ease infinite;
+  animation: fluffy1 1s ease infinite;
 }
 @keyframes fluffy1 {
     0% {transform: translate(0px, 0px) rotateZ(0deg);color:yellow;}
@@ -227,6 +253,10 @@ post-single
 }
 
 @media only screen and (min-width: 1024px) {
+  .cd-main-content img{
+    max-width: 40%;
+    height: auto;
+  }
   .post-top{
     padding-top: 125px;
   }
@@ -615,13 +645,22 @@ Main content
 .cd-main-content h3{
   font-size: 20px;
   font-weight: bold;
+  margin-bottom:10px;
 }
 .cd-main-content h4{
   font-size: 15px;
 }
+.cd-main-content ol  {
+  list-style-type: decimal
+  margin: 0;
+  padding: 0
+}
+.cd-main-content ol li  {
+  padding-left: 1.3em;
+  text-indent: -1.3em;
+}
 .cd-main-content ul {
 	padding:0.5em;
-	list-style-type:none;
 }
 .cd-main-content ul li {
 	position:relative;

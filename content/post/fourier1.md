@@ -12,8 +12,6 @@ draft: false
 authorpage: "member/h崎"
 ---
 
-<img src="/img/fourier/8.jpg" alt="Drawing" style="width: 100%"/>
-
 ## はじめに
 
 物理部部長のH崎です。音展の二週間前を切って午前2時とかに書いているので、誤字脱字があるかもしれませんが、大目にみてくださいね。  
