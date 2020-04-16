@@ -9,7 +9,6 @@ Primary style
 
 html {
   font-size: 62.5%;
-  overscroll-behavior: none;
 }
 
 body {
@@ -18,6 +17,7 @@ body {
   color: #25283D;
   background-color: #ECF0F1;
   -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
 }
 
 a {
@@ -637,11 +637,10 @@ Intro Section
 -------------------------------- */
 .cd-hero {
   /* vertically align its content */
-  display: table
+  display: table;
   width: 100%;
-  margin-top: -400px;
-  height: 800px;
-  -webkit-transform: translateY(225px);
+  margin-top: 60px;
+  height: 300px;
   background-color: gray;
   background-size: cover;
   position: relative;
@@ -654,12 +653,12 @@ Intro Section
   right: 0;
   top: 0;
   bottom :0;
-  margin: auto;
+  margin:  auto;
   text-align: center;
   line-height: 50px;
   font-size: 60px;
   color: white;
-  z-index: 3;
+  z-index: 1;
 }
 .cd-hero .cd-hero-content2 {
   width: 250px;
