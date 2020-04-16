@@ -1,6 +1,6 @@
 ---
-title: Introduction
-description: 自己紹介
+title: Profile
+description: プロフィール
 intro: true
 # ファイル名はintroduction.md以外に変更しないで下さい！！！
 ---

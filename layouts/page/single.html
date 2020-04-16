@@ -3,7 +3,7 @@
       <div class="container">
         <div class="row">
            <div class="col-10 offset-1">
-             <div class="post-heading">
+             <div class="post-heading animate">
                <h1>{{ .Title }}</h1>
                <br>
                <h2>{{ .Description }}</h2>
@@ -40,9 +40,9 @@
     		<li><a href="/">Home</a></li>
         {{ if isset .Params "intro" }}
           {{ if eq .Params.intro true }}
-      		  <li><a class="active" href="/page/introduction">Intro</a></li>
+      		  <li><a class="active" href="/page/profile">Profile</a></li>
           {{ else }}
-            <li><a href="/page/introduction">Intro</a></li>
+            <li><a href="/page/profile">Profile</a></li>
           {{ end }}
         {{ end }}
     		<li><a href="/post">Blog</a></li>

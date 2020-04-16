@@ -1,4 +1,4 @@
-baseurl = "https://hamataku.netlify.com"
+baseurl = "https://hamataku.netlify.app"
 title = "Hamataku Lab"
 canonifyurls = true
 paginate = 8
@@ -8,6 +8,7 @@ googleAnalytics = "" # delete or comment to disable Google Analytics JS generati
 hasCJKLanguage = "true"
 pygmentsCodefences = true
 pygmentsUseClasses = true
+disqusShortname = "hamataku-lab"
 
 [author]
 name = "hamataku"

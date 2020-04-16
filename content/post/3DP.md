@@ -9,7 +9,6 @@ tags:
 math: false
 comments: true
 draft: false
-authorpage: "member/h崎"
 ---
 
 ![](/img/3DP/1.png "100")
