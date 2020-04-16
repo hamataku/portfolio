@@ -38,10 +38,10 @@
                     <div class="pro-h3">hamatakuをフォローする</div>
                     <a href="https://twitter.com/Warapen4?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @Warapen4</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                   </div>
-                  <a class="twitter-timeline" href="https://twitter.com/Warapen4?ref_src=twsrc%5Etfw" data-tweet-limit="5">Tweets by Warapen4</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                  <a class="twitter-timeline" href="https://twitter.com/Warapen4?ref_src=twsrc%5Etfw" data-tweet-limit="4">Tweets by Warapen4</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
                 <div class="col-12 order-1 col-md-8 order-md-2">
-                  {{ .Content }}
+                  {{ .Content | replaceRE "<img src=\"(.+)\\.(png|jpeg|jpg|gif|PNG|JPG|JPEG|GIF)\" alt=\"(.*)\" title=\"(.*)\"" "<img src=\"$1.$2\" alt=\"$3\" style=\"width: $4%\"" | safeHTML}}
                   <div class="disqus-comments">
                     {{ template "_internal/disqus.html" . }}
                   </div>

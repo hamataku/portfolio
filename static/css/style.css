@@ -109,6 +109,30 @@ footer{
   margin: 20px 0 40px 0;
 }
 
+.cd-page-content .page-title{
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+.cd-page-content .page-title img{
+  width: 50%;
+  max-width: 200px;
+  width: auto;
+}
+.cd-page-content{
+  font-size: 16px;
+  line-height: 35px;
+}
+.cd-page-content h2{
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.cd-page-content p{
+  margin-bottom: 15px;
+}
+
+
+
 /* --------------------------------
 post-single
 -------------------------------- */
@@ -655,7 +679,6 @@ Main content
 .cd-main-content h3{
   font-size: 20px;
   font-weight: bold;
-  margin-bottom:10px;
 }
 .cd-main-content h4{
   font-size: 15px;

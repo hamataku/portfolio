@@ -1,32 +1,10 @@
 {{ partial "header.html" .}}
-    <div class="post-intro">
-      <div class="container">
-        <div class="row">
-           <div class="col-10 offset-1">
-             <div class="post-heading animate">
-               <h1>{{ .Title }}</h1>
-               <br>
-               <h2>{{ .Description }}</h2>
-             </div>
-           </div>
-        </div>
-      </div>
-    </div>
-
     <!-- Post Content -->
-    <div class="cd-main-content">
+    <div class="cd-page-content">
         <div class="container">
             <div class="row">
-                <div class="col-10 offset-1">
-                  {{ if isset .Params "math" }}
-                      {{ if eq .Params.math true }}
-                          {{ .Content | replaceRE ".begin{(.+)}" "<div class=\"h-scroll\">\\begin{$1}" | replaceRE ".end{(.+)}" "\\end{$1} </div>" | replaceRE "<p>\\$\\$" "<p><div class=\"h-scroll\">$$$$"| replaceRE "\\$\\$</p>" "$$$$</div></p>" | replaceRE "<img src=\"(.+)\\.(png|jpeg|jpg|gif|PNG|JPG|JPEG|GIF)\" alt=\"(.*)\" title=\"(.*)\"" "<img src=\"$1.$2\" alt=\"$3\" style=\"width: $4%\"" | safeHTML}}
-                      {{else}}
-                          {{ .Content | replaceRE "<img src=\"(.+)\\.(png|jpeg|jpg|gif|PNG|JPG|JPEG|GIF)\" alt=\"(.*)\" title=\"(.*)\"" "<img src=\"$1.$2\" alt=\"$3\" style=\"width: $4%\"" | safeHTML}}
-                      {{end}}
-                  {{ else }}
-                      {{ .Content | replaceRE "<img src=\"(.+)\\.(png|jpeg|jpg|gif|PNG|JPG|JPEG|GIF)\" alt=\"(.*)\" title=\"(.*)\"" "<img src=\"$1.$2\" alt=\"$3\" style=\"width: $4%\"" | safeHTML}}
-                  {{end}}
+                <div class="col-10 offset-1 col-md-8 offset-md-2">
+                  {{.Content}}
 
                   {{ partial "comments.html" .}}
 

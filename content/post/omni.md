@@ -3,7 +3,7 @@ title: オムニホイールで全方向移動
 date: '2018-08-22'
 image: /img/dd098827-92fd-43f1-9563-6aac5acea5bd.png
 description: パンジャンドラムではなく、オムニホイールです。
-author: H﨑
+
 tags:
   - オムニホイール
   - Blynk

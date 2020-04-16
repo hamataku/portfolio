@@ -6,11 +6,11 @@ tags:
     - "processing"
 image: "/img/fourier/9.png"
 description: "フーリエ変換を視覚的に理解できるお絵かきプログラムを作ってみましょう！"
-author: H﨑
+
 draft: false
 comments: true
 math: true
-authorpage: "member/h崎"
+
 ---
 
 ## はじめに

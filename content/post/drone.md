@@ -3,14 +3,12 @@ title: 自作ドローン製作記
 date: '2018-05-03'
 image: /img/3d4cef88-6116-49dc-90ff-37fa2ee89975.png
 description: 2017年度の音展でドローンを製作した時の製作記です。
-author: H﨑
 tags:
   - ドローン
   - ジョイコン
 math: false
 comments: true
 draft: false
-authorpage: "member/h崎"
 ---
 物理部部長のH﨑です。  
 高1の音展でドローンを自作したのですが、これまた記録等を全く残していなかったので、改めて紹介します。  
