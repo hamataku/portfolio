@@ -29,9 +29,9 @@
 
     <!-- Post Content -->
     <div class="cd-main-content">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-12 col-md-4 order-2 order-md-1">
+                <div class="col-12 order-2 col-md-4 order-md-1">
                   <div class="profile">
                     <div class="pro-h2"><a href="/page/profile">hamataku</a></div>
                     <div>プログラミングとか、電子工作、音楽を広く浅くやってる学生です。</div>
@@ -40,19 +40,11 @@
                   </div>
                   <a class="twitter-timeline" href="https://twitter.com/Warapen4?ref_src=twsrc%5Etfw" data-tweet-limit="5">Tweets by Warapen4</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
-                <div class="col-12 col-md-8 order-1 order-md-2">
-                  {{ if isset .Params "math" }}
-                      {{ if eq .Params.math true }}
-                          {{ .Content | replaceRE ".begin{(.+)}" "<div class=\"h-scroll\">\\begin{$1}" | replaceRE ".end{(.+)}" "\\end{$1} </div>" | replaceRE "<p>\\$\\$" "<p><div class=\"h-scroll\">$$$$"| replaceRE "\\$\\$</p>" "$$$$</div></p>" | replaceRE "<img src=\"(.+)\\.(png|jpeg|jpg|gif|PNG|JPG|JPEG|GIF)\" alt=\"(.*)\" title=\"(.*)\"" "<img src=\"$1.$2\" alt=\"$3\" style=\"width: $4%\"" | safeHTML}}</div>
-                      {{else}}
-                          {{ .Content | replaceRE "<img src=\"(.+)\\.(png|jpeg|jpg|gif|PNG|JPG|JPEG|GIF)\" alt=\"(.*)\" title=\"(.*)\"" "<img src=\"$1.$2\" alt=\"$3\" style=\"width: $4%\"" | safeHTML}}
-                      {{end}}
-                  {{ else }}
-                      {{ .Content | replaceRE "<img src=\"(.+)\\.(png|jpeg|jpg|gif|PNG|JPG|JPEG|GIF)\" alt=\"(.*)\" title=\"(.*)\"" "<img src=\"$1.$2\" alt=\"$3\" style=\"width: $4%\"" | safeHTML}}
-                  {{end}}
-
-                  {{ partial "comments.html" .}}
-
+                <div class="col-12 order-1 col-md-8 order-md-2">
+                  {{ .Content }}
+                  <div class="disqus-comments">
+                    {{ template "_internal/disqus.html" . }}
+                  </div>
                 </div>
             </div>
         </div>

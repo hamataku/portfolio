@@ -63,6 +63,7 @@ footer{
   font-weight: normal;
   opacity: 0.3;
 }
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -254,7 +255,7 @@ post-single
 
 @media only screen and (min-width: 1024px) {
   .cd-main-content img{
-    max-width: 40%;
+    max-width: 30%;
     height: auto;
   }
   .post-top{
@@ -298,6 +299,10 @@ post-single
 @media only screen and (min-width: 768px) {
   .cd-auto-hide-header .logo a, .cd-auto-hide-header .logo img {
     font-size: 3rem;
+  }
+  .cd-main-content img{
+    max-width: 50%;
+    height: auto;
   }
 }
 
