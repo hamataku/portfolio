@@ -38,6 +38,9 @@ intro: true
 ・ほんのちょっとギター<br>
 ・限りなく微小にピアノ<br>
 
+</div>
+<div class="animate">
+
 自慢は家に<a href="/post/3dp">3Dプリンタ</a>があること？です笑<br>
 CADはFusion360を使ってます。
 
