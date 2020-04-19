@@ -721,7 +721,7 @@ Main content
 	height:0;
 	width:0;
 	border-style: solid;
-	border-width: 6px 0 6px 30px;
+	border-width: 6px 0 6px 10px;
 	border-color: transparent transparent transparent black;
 }
 @media only screen and (min-width: 1024px) {
