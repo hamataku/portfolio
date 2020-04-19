@@ -2,8 +2,16 @@
   <div class="card h-100">
     <a href="{{ .Permalink }}">
       <img class="card-img card-height" src="{{ .Site.BaseURL }}{{ .Params.image }}" alt="">
-    <h4 class="card-title">{{ .Title }}</h4>
     </a>
+    <p class="post-meta">
+      <i class="far fa-clock"></i>&nbsp{{ dateFormat (.Site.Params.DateForm | default "Mon, Jan 2, 2006") .Date }}
+    </p>
+    <a href="{{ .Permalink }}">
+      <h4 class="card-title">{{ .Title }}</h4>
+    </a>
+    <p class="post-meta">
+      {{ partial "tags.html" .}}
+    </p>
     <div class="card-text">{{ .Description }}</div>
   </div>
 </div>

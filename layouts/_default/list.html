@@ -1,29 +1,21 @@
 {{ partial "header.html" . }}
-
-    <!-- Page Header -->
-    <header class="intro-header" style="background-image: url('{{ .Site.BaseURL }}/img/background/2.jpg')">
-     <div class="container">
-       <div class="row">
-         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-
-           <div class="site-heading">
-             <h1>{{ .Title }}</h1>
-             <hr class="small">
-             <span class="subheading">{{ .Description }}</span>
+    <div class="post-top">
+      <div class="container">
+        <div class="row">
+           <div class="col-12">
+             <div class="site-title">
+                {{ .Title }}
+             </div>
            </div>
-         </div>
-       </div>
-     </div>
-    </header>
+        </div>
+      </div>
+    </div>
 
     <!-- Main Content -->
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           {{ if eq .Section "post" }}
-          <script async src="https://cse.google.com/cse.js?cx=015021849101661340119:xouinhkjqiv"></script>
           {{ end }}
-          <div class="gcse-search"></div>
           {{ range .Paginator.Pages }}
               {{ .Render "archive" }}
           {{ end }}
@@ -32,10 +24,19 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
-          {{ template "_internal/pagination.html" . }}
+        <div class="col-12">
+          {{ partial "pagination.html" . }}
         </div>
       </div>
     </div>
+
+    <nav class="cd-secondary-nav post-list">
+    	<ul>
+    		<li><a href="/">Home</a></li>
+    		<li><a href="/page/profile">Profile</a></li>
+    		<li><a class="active" href="/post">Blog</a></li>
+        <li><a href="/page/contact">Contact</a></li>
+    	</ul>
+    </nav>
 
 {{ partial "footer.html" . }}

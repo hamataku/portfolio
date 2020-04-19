@@ -10,11 +10,11 @@ intro: true
 <h2>hamataku</h2>
 
 </div>
-<div class="animate">
-2001年生まれの18歳です。 <strong>広く浅く</strong> 色んなことに挑戦しています。
+<div class="animate-left">
+2001年生まれの18歳です。広く浅く色んなことに挑戦しています。
 最近、自分のコードの書き方がガラパゴス化してる気がするので、わかりやすいコードを書く方法を大学生の間に学びたいと思っています。
 </div>
-<div class="animate">
+<div class="animate-right">
 
 <h2>現在の所属</h2>
 
@@ -23,12 +23,15 @@ intro: true
 ・<a href="https://tuk.t.u-tokyo.ac.jp/robotech/">東京大学ロボコンサークルRobotech</a><br>
 ・<a href="https://todaipomp.github.io/">軽音サークル東大POMP</a>
 
+</div>
+<div class="animate-left">
+
 <h2>アカウント</h2>
 ・<a href="https://twitter.com/Warapen4">Twitter</a><br>
 ・<a href="https://github.com/hamataku">Github</a>
 
 </div>
-<div class="animate">
+<div class="animate-right">
 
 <h2>できること</h2>
 ・機械工作(3Dプリンタ,CAD)<br>
@@ -37,14 +40,9 @@ intro: true
 ・ほんのちょっとギター<br>
 ・限りなく微小にピアノ<br>
 
-</div>
-<div class="animate">
-
 自慢は家に<a href="/post/3dp">3Dプリンタ</a>があること？です笑<br>
-CADはFusion360を使ってます。
+CADはFusion360を使ってましたが、<a href="https://tuk.t.u-tokyo.ac.jp/robotech/">Robotech</a>はSolidWorksを使うらしいのでそちらにシフトチェンジしようかなと思ってます。
 
 昔はC言語やってたけど、ここ数年はPythonばっかりやってます。機械学習は昔TensorFlowでGPUぶんぶん回して遊んでた程度です。<br>
-
-CSSとhtmlは書けます。Javascriptは<strong>書けません(ﾄﾞﾔ)</strong> 好きなことはscriptタグで外部ライブラリを読み込むことです。
-
 </div>
+<br>

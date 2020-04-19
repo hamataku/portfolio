@@ -49,8 +49,8 @@
     <script src="{{ "js/main.js" | absURL }}"></script>
     {{ if isset .Params "particle"}}
     <script src="{{ "js/particles.min.js" | absURL }}"></script>
-    {{ end}}
-    <script>window.sr = ScrollReveal({ delayType: 'onload' });sr.reveal( '.animate', {origin: 'bottom',scale:1.4});sr.reveal( '.animate-late', {origin: 'bottom',scale:1.4,delay:100,duration:500});sr.reveal( '.animate-card', {origin: 'bottom',scale:1.1,delay:100,duration:500});</script>
+    {{ end }}
+    <script>window.sr = ScrollReveal({ delayType: 'onload' });sr.reveal( '.animate', {origin: 'bottom',scale:1.4});sr.reveal( '.animate-left', {origin: 'left',distance: '50px'});sr.reveal( '.animate-right', {origin: 'right',distance: '50px'});sr.reveal( '.animate-late', {origin: 'bottom',scale:1.4,delay:100,duration:500});sr.reveal( '.animate-card', {origin: 'bottom',scale:1.1,delay:100,duration:500});</script>
     {{ template "_internal/google_analytics.html" . }}
 
 </body>
