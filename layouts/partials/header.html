@@ -2,6 +2,7 @@
 <html lang="{{ .Site.LanguageCode }}">
 
 <head>
+    {{ template "_internal/google_analytics.html" . }}
     {{ if isset .Params "math" }}
       {{ if eq .Params.math true }}
         <script type="text/x-mathjax-config">
