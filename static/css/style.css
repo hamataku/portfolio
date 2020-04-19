@@ -55,6 +55,7 @@ footer{
 }
 #paging ul {
   padding: 0;
+  list-style: none;
 }
 #paging i {
   font-weight: bold;
@@ -126,12 +127,11 @@ footer{
   font-weight: bold;
   font-size: 30px;
   margin-bottom: 10px;
+  margin-top: 50px;
 }
 .cd-page-content p{
   margin-bottom: 15px;
 }
-
-
 
 /* --------------------------------
 post-single
@@ -303,6 +303,10 @@ post-single
   .card-height{
     height:150px;
   }
+  .cd-main-content img{
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .cd-auto-hide-header .logo,
@@ -321,7 +325,7 @@ post-single
 .cd-auto-hide-header .logo a, .cd-auto-hide-header .logo img {
   display: block;
   font-family: "Hind", sans-serif;
-  color: skyblue;
+  color: #01BBDD;
   font-size: 2.5rem;
 }
 @media only screen and (min-width: 768px) {
@@ -329,7 +333,7 @@ post-single
     font-size: 3rem;
   }
   .cd-main-content img{
-    max-width: 50%;
+    max-width: 80%;
     height: auto;
   }
 }
@@ -419,6 +423,7 @@ post-single
 }
 .cd-primary-nav > ul {
   position: absolute;
+  list-style: none;
   z-index: 2;
   top: 60px;
   left: 0;
@@ -449,6 +454,7 @@ post-single
     /* vertically align inside parent element */
     display: table-cell;
     vertical-align: middle;
+    list-style: none;
     /* reset mobile style */
     position: relative;
     width: auto;
@@ -486,6 +492,7 @@ post-single
   	:target is used to show navigation on no-js devices
   */
   display: block;
+  list-style: none;
 }
 @media only screen and (min-width: 1024px) {
   .nav-open .cd-primary-nav ul,
@@ -543,6 +550,7 @@ post-single
   display: flex;
   padding: 0 5%;
   overflow-x: auto;
+  list-style: none;
 }
 .cd-secondary-nav ul::after {
   clear: both;
@@ -683,15 +691,15 @@ Main content
   font-size: 15px;
 }
 .cd-main-content ol  {
-  list-style-type: decimal
   margin: 0;
-  padding: 0
+  margin-left: 20px;
 }
 .cd-main-content ol li  {
-  padding-left: 1.3em;
-  text-indent: -1.3em;
+  padding-left: 0.3em;
 }
+
 .cd-main-content ul {
+  list-style: none;
 	padding:0.5em;
 }
 .cd-main-content ul li {
@@ -706,8 +714,8 @@ Main content
 	height:0;
 	width:0;
 	border-style: solid;
-	border-width: 6px 0 6px 9px;
-	border-color: transparent transparent transparent #3F51B5;
+	border-width: 6px 0 6px 30px;
+	border-color: transparent transparent transparent black;
 }
 @media only screen and (min-width: 1024px) {
   .cd-main-content.sub-nav {
@@ -716,6 +724,11 @@ Main content
   .cd-main-content.sub-nav-hero.secondary-nav-fixed {
     margin-top: 70px;
   }
+}
+.embedly-card{
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 /*

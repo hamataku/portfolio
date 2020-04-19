@@ -11,7 +11,6 @@ intro: true
 
 </div>
 <div class="animate">
-
 2001年生まれの18歳です。 <strong>広く浅く</strong> 色んなことに挑戦しています。
 最近、自分のコードの書き方がガラパゴス化してる気がするので、わかりやすいコードを書く方法を大学生の間に学びたいと思っています。
 </div>
@@ -26,7 +25,7 @@ intro: true
 
 <h2>アカウント</h2>
 ・<a href="https://twitter.com/Warapen4">Twitter</a><br>
-・<a href="https://github.com/hamataku">Github</a><br><br>
+・<a href="https://github.com/hamataku">Github</a>
 
 </div>
 <div class="animate">

@@ -12,7 +12,7 @@
     </div>
     <div class="container">
       <div class="row">
-         <div class="col-10 offset-1 col-md-8 offset-md-2 post-intro">
+         <div class="col-10 offset-1 col-lg-8 offset-lg-2 post-intro">
            <div class="post-heading">
              <h1>{{ .Title }}</h1>
              <br>
@@ -31,17 +31,17 @@
     <div class="cd-main-content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 order-2 col-md-4 order-md-1">
+                <div class="col-12 order-2 col-md-10 offset-md-1 col-lg-3 offset-lg-1 order-lg-1">
                   <div class="profile">
                     <div class="pro-h2"><a href="/page/profile">hamataku</a></div>
                     <div>プログラミングとか、電子工作、音楽を広く浅くやってる学生です。</div>
                     <div class="pro-h3">hamatakuをフォローする</div>
-                    <a href="https://twitter.com/Warapen4?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @Warapen4</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <a href="https://twitter.com/Warapen4?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false">Follow @Warapen4</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><br>
                     <a href='https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Fhamataku.netlify.app%2Findex.xml'  target='blank'><img id='feedlyFollow' src='http://s3.feedly.com/img/follows/feedly-follow-rectangle-flat-medium_2x.png' alt='follow us in feedly' width='70' height='28'></a>
                   </div>
                   <a class="twitter-timeline" href="https://twitter.com/Warapen4?ref_src=twsrc%5Etfw" data-tweet-limit="4">Tweets by Warapen4</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
-                <div class="col-12 order-1 col-md-8 order-md-2">
+                <div class="col-12 order-1 col-md-10 offset-md-1 col-lg-7 offset-lg-0 order-lg-2">
                   {{ .Content | replaceRE "<img src=\"(.+)\\.(png|jpeg|jpg|gif|PNG|JPG|JPEG|GIF)\" alt=\"(.*)\" title=\"(.*)\"" "<img src=\"$1.$2\" alt=\"$3\" style=\"width: $4%\"" | safeHTML}}
                   <div class="disqus-comments">
                     {{ template "_internal/disqus.html" . }}
