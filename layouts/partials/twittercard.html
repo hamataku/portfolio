@@ -1,0 +1,16 @@
+<!-- Modified from _internal/twitter_card.html -->
+
+
+<!-- The Open Graph protocol data -->
+<meta property="og:image" content="img/twitter.jpg"/>
+<!-- Twitter summary card with large image must be at least 280x150px -->
+<meta name="twitter:card" content="summary_large_image"/>
+<!-- The Open Graph protocol data -->
+<meta property="og:url" content="{{ $.Permalink }}"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="{{ .Title }}"/>
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}"/>
+<!-- Twitter Card data -->
+<meta name="twitter:title" content="{{ .Title }}"/>
+<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}"/>
+<meta name="twitter:site" content="@Warapen4"/>
