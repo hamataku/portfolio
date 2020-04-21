@@ -270,9 +270,13 @@ footer {
 }
 
 .circle {
-  width: 60%;
   border-radius: 50%;
-  margin-bottom: 20px
+}
+.imgbox{
+  width: 100%;
+  padding-top: 10px;
+  height: 230px;
+  margin: 0 auto;
 }
 
 .copyright {
