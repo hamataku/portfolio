@@ -6,7 +6,7 @@ intro: true
 
 <div class="page-title text-center">
 <div class="imgbox">
-  <img src="/img/hamataku.JPG" alt="" class="img-fluid circle">
+  <img src="/img/hamataku-round.png" alt="" class="img-fluid circle">
 </div>
 <h2>hamataku</h2>
 
