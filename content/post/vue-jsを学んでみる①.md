@@ -30,3 +30,5 @@ Web開発を効率的に行うにはやっぱり高性能なエディタが必�
 あと、Chromeの拡張機能の[https://chrome.google.com/webstore/detail/jetbrains-ide-support/hmhgeddbohgjknpmjagkdomcpobmllji](https://chrome.google.com/webstore/detail/jetbrains-ide-support/hmhgeddbohgjknpmjagkdomcpobmllji "Jetbrains-IDE-Support")を使うと即時Chromeでデバッグできるようです。やったね！
 
 ## 何使って勉強しようかな？
+
+教本を買わないのが最近の僕のスタイルなので、ネットにある何かしらのサイトを手本に進めていきたいと思います。
