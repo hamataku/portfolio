@@ -23,5 +23,3 @@ fields:
 - type: boolean
   name: comments
   label: comments
-pages:
-- content/post/vue-jsを学んでみる①.md
