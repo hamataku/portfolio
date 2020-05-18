@@ -1,4 +1,4 @@
-baseurl = "https://hamataku.netlify.app"
+baseurl = "https://hamataku.netlify.com"
 title = "Hamataku Lab"
 canonifyurls = true
 paginate = 8
