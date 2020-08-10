@@ -38,7 +38,7 @@ let ans = "";
 function getCSV() {
   let csvData = [];
   let data = new XMLHttpRequest();
-  data.open("GET", "/verbs.csv", false); //true:非同期,false:同期
+  data.open("GET", "static/verbs.csv", false); //true:非同期,false:同期
   data.send(null);
 
   let LF = String.fromCharCode(10); //改行ｺｰﾄﾞ
