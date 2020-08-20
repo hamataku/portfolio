@@ -47,11 +47,11 @@
                         <span id="subject"></span>
                     </div>
                     <div class="col-9 col-sm-7">
-                        <div id="quiz" data-toggle="buttons" ontouchstart="">
-                            <label class="element-animation1 btn btn-lg btn-primary btn-block" id="0" onclick="buttonClick(this);"><span class="btn-label"><i class="fas fa-chevron-right"></i></span><span class="btn-span" id="q0">　</span></label>
-                            <label class="element-animation2 btn btn-lg btn-primary btn-block" id="1" onclick="buttonClick(this);"><span class="btn-label"><i class="fas fa-chevron-right"></i></span><span class="btn-span" id="q1">　</span></label>
-                            <label class="element-animation3 btn btn-lg btn-primary btn-block" id="2" onclick="buttonClick(this);"><span class="btn-label"><i class="fas fa-chevron-right"></i></span><span class="btn-span" id="q2">　</span></label>
-                            <label class="element-animation4 btn btn-lg btn-primary btn-block" id="3" onclick="buttonClick(this);"><span class="btn-label"><i class="fas fa-chevron-right"></i></span><span class="btn-span" id="q3">　</span></label>
+                        <div id="quiz" data-toggle="buttons" ontouchstart=””>
+                            <label class="element-animation1 btn btn-lg btn-primary btn-block" aria-disabled="true" id="0" onclick="buttonClick(this.id);"><span class="btn-label"><i class="fas fa-chevron-right"></i></span><span class="btn-span" id="q0">　</span></label>
+                            <label class="element-animation2 btn btn-lg btn-primary btn-block" aria-disabled="true" id="1" onclick="buttonClick(this.id);"><span class="btn-label"><i class="fas fa-chevron-right"></i></span><span class="btn-span" id="q1">　</span></label>
+                            <label class="element-animation3 btn btn-lg btn-primary btn-block" aria-disabled="true" id="2" onclick="buttonClick(this.id);"><span class="btn-label"><i class="fas fa-chevron-right"></i></span><span class="btn-span" id="q2">　</span></label>
+                            <label class="element-animation4 btn btn-lg btn-primary btn-block" aria-disabled="true" id="3" onclick="buttonClick(this.id);"><span class="btn-label"><i class="fas fa-chevron-right"></i></span><span class="btn-span" id="q3">　</span></label>
                         </div>
                     </div>
                 </div>
@@ -62,8 +62,12 @@
                         <div class="col-md-9">
                             <a href="https://hamataku.netlify.com/spanish">最初に戻る</a>
                         </div>
+                        <div class="col-md-3">
+                            <span id="answer"></span>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
