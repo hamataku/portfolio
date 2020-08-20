@@ -1,5 +1,6 @@
 body {
     background-color: aliceblue;
+    font-size: 16px !important;
 }
 
 /* チェックボックスは非表示 */
@@ -30,6 +31,7 @@ label {
 .index {
     margin-top: 60px;
 }
+
 .quiz {
     margin-top: 60px;
     margin-top: 60px;
@@ -142,6 +144,11 @@ label .btn-label {
 
 label .glyphicon {
     top: 34%
+}
+
+.index label{
+    padding:5px;
+    margin: 5px;
 }
 
 .btn-span{
@@ -287,8 +294,4 @@ label .glyphicon {
     }
 }
 
-@media (min-width: 540px) {
-    body{
-        font-size: 16px !important;
-    }
-}
+
