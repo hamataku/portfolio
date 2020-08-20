@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Hamataku Lab</title>
+    <link>https://hamataku.netlify.com/page/</link>
+    <description>Recent content in Pages on Hamataku Lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <copyright>© 2020- Hamataku Lab. All Rights Reserved.</copyright>
+    
+	<atom:link href="https://hamataku.netlify.com/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>プロフィール</title>
+      <link>https://hamataku.netlify.com/page/profile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hamataku.netlify.com/page/profile/</guid>
+      <description>hamataku 2001年生まれの18歳です。広く浅く色んなことに挑戦しています。 最近、自分のコードの書き方がガラパゴス化してる気がするので、わかりやすい</description>
+    </item>
+    
+    <item>
+      <title>連絡</title>
+      <link>https://hamataku.netlify.com/page/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hamataku.netlify.com/page/contact/</guid>
+      <description>Contact with hamataku 氏名(Your Name) Eメールアドレス(Your e-mail address) メッセージ(Message) 送信する</description>
+    </item>
+    
+  </channel>
+</rss>

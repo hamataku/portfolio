@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+
+<head>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-161164249-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+      
+    
+
+    
+
+
+
+<meta property="og:image" content="https://hamataku.netlify.com/img/twitter.jpg"/>
+
+<meta name="twitter:card" content="summary_large_image"/>
+
+<meta property="og:url" content="https://hamataku.netlify.com/post/earphone/"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Pythonで百均イヤホンを高音質化！"/>
+<meta property="og:description" content="百均イヤホンだって、やればできる！"/>
+
+<meta name="twitter:title" content="Pythonで百均イヤホンを高音質化！"/>
+<meta name="twitter:description" content="百均イヤホンだって、やればできる！"/>
+<meta name="twitter:site" content="@Warapen4"/>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="百均イヤホンだって、やればできる！">
+    <meta name="keywords" content="python, earphone">
+    <meta name="google-site-verification" content="DuXbXjlj0iP74FvsnSy6-F95SVEMDcnVV-cFFq4I6rI" />
+    <title>Pythonで百均イヤホンを高音質化！ - Hamataku Lab</title>
+
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    
+    <link href="https://hamataku.netlify.com/css/style.css" rel="stylesheet">
+    
+    <link href="//use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=David+Libre|Hind:400,700" rel="stylesheet">
+    <link rel="icon" href="https://hamataku.netlify.com/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="https://hamataku.netlify.com/favicon/apple-touch-icon.png" sizes="152x152">
+    <link rel="icon" href="https://hamataku.netlify.com/favicon/icon-192x192.png" sizes="192x192" type="image/png">
+</head>
+
+<body>
+    <header class="cd-auto-hide-header">
+      
+      <div class="logo"><a href="https://hamataku.netlify.com/">Hamataku Lab</a></div>
+      <nav class="cd-primary-nav">
+    		<a href="#cd-navigation" class="nav-trigger">
+    			<span>
+    				<em aria-hidden="true"></em>
+    				Menu
+    			</span>
+    		</a> 
+
+    		<ul id="cd-navigation">
+          <li><a href="https://hamataku.netlify.com/page/profile">プロフィール</a></li>
+    			<li><a href="https://hamataku.netlify.com/post">ブログ</a></li>
+    			<li><a href="https://hamataku.netlify.com/page/contact">ご連絡</a></li>
+    		</ul>
+    	</nav> 
+    </header> 
+
+    <div class="post-top">
+      <div class="container">
+        <div class="row">
+           <div class="col-12">
+             <div class="site-title">
+                <a href="https://hamataku.netlify.com/post/">電気<i class="fas fa-bolt fluffy"></i>ブログ</a>
+             </div>
+           </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+         <div class="col-10 offset-1 col-lg-8 offset-lg-2 post-intro">
+           <div class="post-heading">
+             <h1>Pythonで百均イヤホンを高音質化！</h1>
+             <br>
+             <h2>百均イヤホンだって、やればできる！</h2>
+             <span class="meta">
+               
+<div class="text-center">
+<i class="far fa-clock"></i>  2020/3/7　
+<i class="fas fa-tag"></i> <a href="https://hamataku.netlify.com/tags/python">python</a>, <a href="https://hamataku.netlify.com/tags/earphone">earphone</a>
+
+</div>
+
+             </span>
+           </div>
+         </div>
+      </div>
+    </div>
+
+
+
+    
+    <div class="cd-main-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 order-2 col-md-10 offset-md-1 col-lg-3 offset-lg-1 order-lg-1">
+                  <div class="profile">
+                    <div class="pro-h2"><a href="https://hamataku.netlify.com/page/profile">hamataku</a></div>
+                    <div>プログラミングとか、電子工作、音楽を広く浅くやってる学生です。</div>
+                    <div class="pro-h3">hamatakuをフォローする</div>
+                    <a href="https://twitter.com/Warapen4?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false">Follow @Warapen4</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><br>
+                    <a href='https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Fhamataku.netlify.app%2Findex.xml'  target='blank'><img id='feedlyFollow' src='https://s3.feedly.com/img/follows/feedly-follow-rectangle-flat-medium_2x.png' alt='follow us in feedly' width='70' height='28'></a>
+                  </div>
+                  <a class="twitter-timeline" href="https://twitter.com/Warapen4?ref_src=twsrc%5Etfw" data-tweet-limit="4">Tweets by Warapen4</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="col-12 order-1 col-md-10 offset-md-1 col-lg-7 offset-lg-0 order-lg-2">
+                  <h2 id="はじめに">はじめに</h2>
+<p>簡潔に。<strong>百均イヤホンからいい音を流したい。</strong><br>
+百均イヤホンを一度でも使ったことがある人ならわかると思いますが、どんな良音もAMラジオみたいな音にしてしまうんですよね、、、もう逆にすごい。</p>
+<p>で高音質化しようと思ってこんなサイトを見つけた</p>
+<blockquote class="embedly-card"><h4><a href="https://www.excite.co.jp/news/article/Radiolife_30009/">100均イヤホンを高音質化してくれる無料アプリ (2019年2月23日) - エキサイトニュース</a></h4><p>高音質で音楽を楽しむために、高級 イヤホン を使っているという人も多いでしょう。しかし ...</p></blockquote>
+<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+<p>いいんだけど、<strong>個体差とか左右の音圧の差を補正できない！！</strong><br>
+これでは究極の高音質化を達成できません。</p>
+<p>そこで思ったのですが、<strong>百均イヤホンが元の音源をどのように劣化させるかをモデル化できれば、百均イヤホンからハイレゾ音源(比喩)を出すことができるのではないか</strong>と。</p>
+<p>僕が思うに百均イヤホンの音質の悪さの原因は</p>
+<ol>
+<li>周波数ごとの音量が一定でない（低音だけ異常に音が大きいとか）</li>
+<li>左右で音圧が違う</li>
+<li>一定の周波数で共振して倍音が発生している</li>
+</ol>
+<p>この三つではないかという仮説のもと色々実験していきます。</p>
+<h2 id="準備">準備</h2>
+<p>まず、イヤホンの周波数特性を測定します。イヤホンの周波数特性を巷ではF特というらしいですが、それ専用の測定器なんて持ってないので自作します。</p>
+<p><strong>用意したもの</strong></p>
+<p>・SONYのコンデンサーマイク　ECM-SP10<br>
+・適当な金属の円筒スペーサー<br>
+・USBのオーディオインターフェース<br>
+・百均イヤホン<br>
+・いい音(と思う)が出るイヤホン</p>
+<p>マイクがイヤホンジャックを占有してしまうため、新たにUSBインターフェースを買いましたが、環境によっては必要ないかもしれません。</p>
+<p><img src="https://hamataku.netlify.com/img/earphone/2.png" alt=""></p>
+<p>↓作ったのはこんな感じ</p>
+<p><img src="https://hamataku.netlify.com/img/earphone/3.jpg" alt=""></p>
+<p>百円イヤホンのためにこの時点で3000円ぐらい飛んでいきました。これを人は本末転倒と言う。</p>
+<h2 id="測定ソフトの作成">測定ソフトの作成</h2>
+<p>測定の目的はあくまで百均イヤホンを高音質化することなので、この目的に合ったソフトをPythonで作りたいと思います。やりたいことは下記の通り。</p>
+<p><img src="https://hamataku.netlify.com/img/earphone/4.png" alt=""></p>
+<p>マイクの周波数特性やPC(iMac late2013)のオーディオ入力の特性は不明ですが、百均イヤホンといい音イヤホンとの対照実験とすることで、この問題はクリアできた、はず笑。</p>
+<p>作ったソフトのUIはこんな感じです。PyQtとQtDesignerを使ってGUIを作成しました。</p>
+<p><img src="https://hamataku.netlify.com/img/earphone/5.gif" alt=""></p>
+<p>sin波の発振には自作ライブラリの</p>
+<blockquote class="embedly-card"><h4><a href="https://qiita.com/hamataku07130713/items/468124144c2ca23a6128">[Python] pyaudioでsin波をバックグラウンド再生するクラスを作った - Qiita</a></h4><p>(20/03/07 11:52編集) ご指摘を受けて、変数の宣言を変更しました。他に、createData関数内でエラーメッセージを一度のみ表示するよう変更しました。 (20/03/07 18:52編集) close関数を追加しました...</p></blockquote>
+<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+<p>を使用しています。</p>
+<h2 id="測定結果">測定結果</h2>
+<h3 id="仮説１２について">仮説１、２について</h3>
+<p>測定ソフトで取得したデータを、縦軸に音量、横軸に周波数をとってmatplotlibでプロットしてみました。
+<img src="https://hamataku.netlify.com/img/earphone/6.png" alt=""></p>
+<p>グラフを見て分かる通り、百均イヤホンの問題点は二つ。</p>
+<ol>
+<li>言うまでもなく、周波数特性が悪い</li>
+<li>右耳と左耳で出音にバラツキがある</li>
+</ol>
+<p>1に関しては、低音に対して中高音域が過疎っているのがよく分かります。ですので、元の音源の低音を抑えて中高音域を上げれば、百均イヤホンからいい音が出る、はず。<br>
+2に関しては、百均イヤホンを初めて使ったときの平衡感覚が狂うような感覚(わかりませんか)の原因になっているのではないかと思います。よって元の音源のLとRで別々の変換をかけることで対処できるはず。</p>
+<p>次に、いい音イヤホンのデータを百均のデータで割ったもの（つまり周波数ごとの倍率）を0~1に正規化したグラフです。</p>
+<p><img src="https://hamataku.netlify.com/img/earphone/7.png" alt=""></p>
+<p>このグラフによると、例えば百均イヤホン右耳は10000Hzあたりの音を0.8倍すれば良いということがわかります。</p>
+<h3 id="仮説３について">仮説３について</h3>
+<p>仮説３の倍音に関してですが、もし倍音が発生した場合、二つ以上の山が同時に現れるはずです。しかし測定中に高調波（つまりは倍音）が観測されませんでした(あくまで目視)　ですので、今回は倍音の影響は無視したいと思います。</p>
+<p>これらの実験結果をもとに、元の音源の波形を周波数領域に変換してから周波数ごとに音量を調整して、波形に戻すというプログラムの作成を目指します。</p>
+<h2 id="pythonでリアルタイムイコライザーの作成">Pythonでリアルタイムイコライザーの作成</h2>
+<p>百均イヤホンをMacで常用したいので、Macの出音をリアルタイム変換できるプログラムを組んでいきます。
+<img src="https://hamataku.netlify.com/img/earphone/8.png" alt=""></p>
+<p>Macの音声出力を取り込むためにSoundflowerを使って仮想オーディオインターフェースを作成しました。
+まず、自環境でのオーディオデバイスの割り当てを調べます。
+予め<code>pip install pyaudio</code>でpyaudioをインストールしておきます。</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pyaudio</span>
+<span class="n">audio</span> <span class="o">=</span> <span class="n">pyaudio</span><span class="o">.</span><span class="n">PyAudio</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">audio</span><span class="o">.</span><span class="n">get_device_count</span><span class="p">()):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">audio</span><span class="o">.</span><span class="n">get_device_info_by_index</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</code></pre></div><p>これを実行すると</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">{</span><span class="s1">&#39;index&#39;</span>: 0, <span class="s1">&#39;structVersion&#39;</span>: 2, <span class="s1">&#39;name&#39;</span>: <span class="s1">&#39;Built-in Microphone&#39;</span>, <span class="s1">&#39;hostApi&#39;</span>: 0, <span class="s1">&#39;maxInputChannels&#39;</span>: 2, <span class="s1">&#39;maxOutputChannels&#39;</span>: 0, <span class="s1">&#39;defaultLowInputLatency&#39;</span>: 0.0029705215419501135, <span class="s1">&#39;defaultLowOutputLatency&#39;</span>: 0.01, <span class="s1">&#39;defaultHighInputLatency&#39;</span>: 0.013129251700680272, <span class="s1">&#39;defaultHighOutputLatency&#39;</span>: 0.1, <span class="s1">&#39;defaultSampleRate&#39;</span>: 44100.0<span class="o">}</span>
+<span class="o">{</span><span class="s1">&#39;index&#39;</span>: 1, <span class="s1">&#39;structVersion&#39;</span>: 2, <span class="s1">&#39;name&#39;</span>: <span class="s1">&#39;Built-in Output&#39;</span>, <span class="s1">&#39;hostApi&#39;</span>: 0, <span class="s1">&#39;maxInputChannels&#39;</span>: 0, <span class="s1">&#39;maxOutputChannels&#39;</span>: 2, <span class="s1">&#39;defaultLowInputLatency&#39;</span>: 0.01, <span class="s1">&#39;defaultLowOutputLatency&#39;</span>: 0.0039002267573696146, <span class="s1">&#39;defaultHighInputLatency&#39;</span>: 0.1, <span class="s1">&#39;defaultHighOutputLatency&#39;</span>: 0.014058956916099773, <span class="s1">&#39;defaultSampleRate&#39;</span>: 44100.0<span class="o">}</span>
+〜〜〜〜〜途中略〜〜〜〜〜
+<span class="o">{</span><span class="s1">&#39;index&#39;</span>: 4, <span class="s1">&#39;structVersion&#39;</span>: 2, <span class="s1">&#39;name&#39;</span>: <span class="s1">&#39;Soundflower (2ch)&#39;</span>, <span class="s1">&#39;hostApi&#39;</span>: 0, <span class="s1">&#39;maxInputChannels&#39;</span>: 2, <span class="s1">&#39;maxOutputChannels&#39;</span>: 2, <span class="s1">&#39;defaultLowInputLatency&#39;</span>: 0.01, <span class="s1">&#39;defaultLowOutputLatency&#39;</span>: 0.0014512471655328798, <span class="s1">&#39;defaultHighInputLatency&#39;</span>: 0.1, <span class="s1">&#39;defaultHighOutputLatency&#39;</span>: 0.011609977324263039, <span class="s1">&#39;defaultSampleRate&#39;</span>: 44100.0<span class="o">}</span>
+</code></pre></div><p>soundflower(2ch)を入力として使うのでdevice番号は4、出力は内蔵出力ですのでdevice番号は1となります。この番号は環境によって異なります。
+全ソースコードは<a href="https://github.com/hamataku/RefineEffect">GitHub</a>に上げているので、ここでは一部を取り上げます。</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">OUTPUT_INDEX</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">INPUT_INDEX</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">CALIBRATE_PATH</span> <span class="o">=</span> <span class="s2">&#34;calibrate/earphone.npy&#34;</span>  <span class="c1"># Calibrate earphone data</span>
+<span class="n">LEFT_PATH</span> <span class="o">=</span> <span class="s2">&#34;earphone/L.npy&#34;</span>  <span class="c1"># left poor earphone</span>
+<span class="n">RIGHT_PATH</span> <span class="o">=</span> <span class="s2">&#34;earphone/R.npy&#34;</span>  <span class="c1"># right poor earphone</span>
+<span class="n">OUTPUT_FIX</span> <span class="o">=</span> <span class="mi">7</span>  <span class="c1"># change here according to sound level</span>
+
+<span class="n">RATE</span> <span class="o">=</span> <span class="mi">44100</span>  <span class="c1"># サンプリング周波数</span>
+<span class="n">OVERFLOW_LIMIT</span> <span class="o">=</span> <span class="mi">20480</span>  <span class="c1"># Inputのバッファーの閾値</span>
+
+<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="c1"># pyqtのセットアップ</span>
+    <span class="nb">super</span><span class="p">(</span><span class="n">MainWindow</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">ui</span> <span class="o">=</span> <span class="n">Ui_MainWindow</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">setupUi</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="c1"># pyaudioセットアップ</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">pa</span> <span class="o">=</span> <span class="n">pyaudio</span><span class="o">.</span><span class="n">PyAudio</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">out_stream</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pa</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">format</span><span class="o">=</span><span class="n">pyaudio</span><span class="o">.</span><span class="n">paInt16</span><span class="p">,</span>
+                                   <span class="n">channels</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                                   <span class="n">rate</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">RATE</span><span class="p">,</span>
+                                   <span class="nb">input</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                                   <span class="n">output</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                                   <span class="n">frames_per_buffer</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span>
+                                   <span class="n">output_device_index</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">OUTPUT_INDEX</span><span class="p">)</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">in_stream</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pa</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">format</span><span class="o">=</span><span class="n">pyaudio</span><span class="o">.</span><span class="n">paInt16</span><span class="p">,</span>
+                                  <span class="n">channels</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                                  <span class="n">rate</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">RATE</span><span class="p">,</span>
+                                  <span class="nb">input</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                                  <span class="n">output</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                                  <span class="n">frames_per_buffer</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span>
+                                  <span class="n">input_device_index</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">INPUT_INDEX</span><span class="p">)</span>
+
+    <span class="c1"># 測定データ(ndarray)読み込み</span>
+    <span class="n">calib</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CALIBRATE_PATH</span><span class="p">)</span>  <span class="c1"># いい音イヤホン</span>
+    <span class="n">left</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">LEFT_PATH</span><span class="p">)</span>  <span class="c1"># 百均イヤホン右</span>
+    <span class="n">right</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">RIGHT_PATH</span><span class="p">)</span>  <span class="c1"># 百均イヤホン左</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">FLAG</span> <span class="o">=</span> <span class="bp">False</span>  <span class="c1"># ON/OFFのフラグ</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">in_frames</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">out_frames</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># 周波数ごとの倍率で最も大きい値を取得する</span>
+    <span class="nb">max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">([</span><span class="n">calib</span> <span class="o">/</span> <span class="n">left</span><span class="p">,</span> <span class="n">calib</span> <span class="o">/</span> <span class="n">right</span><span class="p">])</span>
+    <span class="c1"># maxで割って倍率を０〜１の間に収める</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">l_mag</span> <span class="o">=</span> <span class="n">calib</span> <span class="o">/</span> <span class="n">left</span> <span class="o">/</span> <span class="nb">max</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">r_mag</span> <span class="o">=</span> <span class="n">calib</span> <span class="o">/</span> <span class="n">right</span> <span class="o">/</span> <span class="nb">max</span>
+    <span class="c1"># FFT用に測定データを加工</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">l_mag</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">l_mag</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="bp">self</span><span class="o">.</span><span class="n">l_mag</span><span class="p">[:</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">OUTPUT_FIX</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">r_mag</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">r_mag</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="bp">self</span><span class="o">.</span><span class="n">r_mag</span><span class="p">[:</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">OUTPUT_FIX</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">in_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int16&#39;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">l_out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int16&#39;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">r_out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int16&#39;</span><span class="p">)</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">up</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">256</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">down</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">)</span>
+
+    <span class="c1"># タイマーセット</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">timer</span> <span class="o">=</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">QTimer</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">timeout</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="c1"># インプットからのデータ読み込み</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">in_stream</span><span class="o">.</span><span class="n">get_read_available</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="mi">1024</span><span class="p">:</span>
+        <span class="nb">input</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">in_stream</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1024</span><span class="p">,</span> <span class="n">exception_on_overflow</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">in_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">in_data</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int16&#39;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">in_frames</span> <span class="o">+=</span> <span class="mi">1024</span>
+    <span class="c1"># インプットデータのフレーム数が1024を超えたら</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">in_frames</span> <span class="o">&gt;=</span> <span class="mi">1024</span><span class="p">:</span>
+        <span class="n">left_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">in_data</span><span class="p">[:</span><span class="mi">2047</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+        <span class="n">right_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">in_data</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2048</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">FLAG</span><span class="p">:</span>
+            <span class="n">left_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">ifft</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span>
+                <span class="n">left_data</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">l_mag</span><span class="p">)</span><span class="o">.</span><span class="n">real</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int16&#39;</span><span class="p">)</span>
+            <span class="n">right_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">ifft</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span>
+                <span class="n">right_data</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">r_mag</span><span class="p">)</span><span class="o">.</span><span class="n">real</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int16&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">l_out</span><span class="p">[</span><span class="o">-</span><span class="mi">256</span><span class="p">:]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">l_out</span><span class="p">[</span><span class="o">-</span><span class="mi">256</span><span class="p">:]</span> <span class="o">*</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">down</span> <span class="o">+</span> <span class="n">left_data</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">256</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">up</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">r_out</span><span class="p">[</span><span class="o">-</span><span class="mi">256</span><span class="p">:]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">r_out</span><span class="p">[</span><span class="o">-</span><span class="mi">256</span><span class="p">:]</span> <span class="o">*</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">down</span> <span class="o">+</span> <span class="n">right_data</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">256</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">up</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">l_out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">l_out</span><span class="p">,</span> <span class="n">left_data</span><span class="p">[</span><span class="mi">256</span><span class="p">:])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">r_out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">r_out</span><span class="p">,</span> <span class="n">right_data</span><span class="p">[</span><span class="mi">256</span><span class="p">:])</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">in_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">in_data</span><span class="p">[</span><span class="mi">1536</span><span class="p">:]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">in_frames</span> <span class="o">-=</span> <span class="mi">768</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">out_frames</span> <span class="o">+=</span> <span class="mi">768</span>
+
+    <span class="c1"># 出力データのフレーム数が1024を超えたら</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_frames</span> <span class="o">&gt;=</span> <span class="mi">1024</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+            <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">l_out</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1024</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">r_out</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1024</span><span class="p">]])</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s2">&#34;h&#34;</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="o">*</span><span class="n">data</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">out_stream</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">l_out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">l_out</span><span class="p">[</span><span class="mi">1024</span><span class="p">:]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">r_out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">r_out</span><span class="p">[</span><span class="mi">1024</span><span class="p">:]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">out_frames</span> <span class="o">-=</span> <span class="mi">1024</span>
+
+    <span class="c1"># オーバーフロー処理</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">in_frames</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">OVERFLOW_LIMIT</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">in_frames</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">out_frames</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">in_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int16&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">l_out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int16&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">r_out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int16&#39;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;OVER FLOW!!&#34;</span><span class="p">)</span>
+
+</code></pre></div><p>init関数でやってることは<strong>pyaudioのセットアップ</strong>と<strong>測定データの加工</strong>です。<br>
+pyaudioは入力と出力のstreamを同時に開くこともできるのですが、今回入力と出力のデバイスが異なるので別々のstreamを作成しています。<br>
+また測定データの加工についてですが、波形にFFTをかけると0を対象に正負対称のスペクトルが得られるため、正部分のみの測定データを負の部分にも拡張しています。<br>
+正負対称のスペクトルが得られる理由については<a href="http://zakii.la.coocan.jp/fourie/17_real_symmetric.htm">実数と左右対称</a>が参考になります。</p>
+<p>問題はupdate関数なのですが、、、だいぶ面倒な処理をしています。<br>
+インプットデータを即時加工してアウトプットすればいいと思って最初プログラムを組んだのですが、常に同じ音程のノイズが混じるため色々調べてみると、<a href="https://qiita.com/as_kuya/items/7c3b96df8d037619ba00#%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E5%90%8C%E5%A3%AB%E3%81%AE%E3%82%AF%E3%83%AD%E3%82%B9%E3%83%95%E3%82%A7%E3%83%BC%E3%83%89">JavaScriptとWebAudioでサウンド・イコライザーを作る</a>という記事にあるように、つなぎ目で波形がズレてノイズが生じていることが判明。 この記事を参考につなぎ目をクロスフェードさせます。</p>
+<p>このプログラムでは1セット1024フレームのうち256フレームを隣のフレームとクロスフェードさせ、できるだけ計算量を削減しています。<br>
+Pythonでイコライザーなどを作るときに参考になれば幸いです。</p>
+<p><img src="https://hamataku.netlify.com/img/earphone/9.png" alt=""></p>
+<p>そして、できたのがこのソフト。</p>
+<h3 id="ジャーン">ジャーン！！</h3>
+<p><strong>Refine Effect!</strong>(仮名のつもりだったけど、もういいや）</p>
+<p><img src="https://hamataku.netlify.com/img/earphone/10.png" alt=""></p>
+<p>とっても<strong>シンプルイズベスト</strong>なUIです。さてこのソフトからどのような音が出てくるのでしょうか、、、？</p>
+<h2 id="結果">結果</h2>
+<p>結論から言うと<strong>百均イヤホン高音質化に成功しました！</strong></p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">Web版ツイッターから動画上げると圧縮されんのか<br>ということで、再々掲、、、 <a href="https://t.co/Db1acnmBVX">pic.twitter.com/Db1acnmBVX</a></p>&mdash; ざっく (@Warapen4) <a href="https://twitter.com/Warapen4/status/1251771963342614529?ref_src=twsrc%5Etfw">April 19, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>といってもマイク越しには伝わりにくいorz<br>
+言葉で説明すれば、エフェクトO F Fだと水中で音を聞いてる状態だったのが、エフェクトONにすると水面に顔出して周りを見渡せるぐらい視界が開ける感じです。</p>
+<h3 id="伝われ">伝われ！</h3>
+<p>全てのソースコード、インストール方法や使い方は<a href="https://github.com/hamataku/RefineEffect">GitHub</a>に上げているので、そこそこのマイクと百均イヤホンをお持ちの方は是非お試しください。</p>
+<blockquote class="embedly-card"><h4><a href="https://github.com/hamataku/RefineEffect">hamataku/RefineEffect</a></h4><p>"Refine Effect" is a tool which can improve sound quality of cheap earphones. </p></blockquote>
+<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
+                  <div class="disqus-comments">
+                    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hamataku-lab" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="cd-secondary-nav">
+    	<ul>
+    		<li><a href="https://hamataku.netlify.com/">Home</a></li>
+    		<li><a href="https://hamataku.netlify.com/page/profile">Profile</a></li>
+    		<li><a class="active" href="https://hamataku.netlify.com/post">Blog</a></li>
+        <li><a href="https://hamataku.netlify.com/page/contact">Contact</a></li>
+    	</ul>
+    </nav>
+
+    
+    <footer class="footer-setting">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+            <ul class="list-inline text-center">
+              
+                <li class="list-inline-item list-margin">
+                  <a href="mailto:hamatakugarbage@gmail.com">
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+                </li>
+              
+              
+                
+                <li class="list-inline-item">
+                  <a href="https://github.com/hamataku">
+                    <span class="fa-stack fa-lg">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+                </li>
+                
+                <li class="list-inline-item">
+                  <a href="https://twitter.com/Warapen4">
+                    <span class="fa-stack fa-lg">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+                </li>
+                
+                <li class="list-inline-item">
+                  <a href="https://hamataku.netlify.com/index.xml">
+                    <span class="fa-stack fa-lg">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+                </li>
+              
+            </ul>
+            <p class="copyright">© 2020- Hamataku Lab. All Rights Reserved.<br>Code released under the Apache 2.0 license.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.0.3/scrollreveal.min.js"></script>
+    
+    
+    <script>window.sr = ScrollReveal({ delayType: 'onload' });sr.reveal( '.animate', {origin: 'bottom',scale:1.4});sr.reveal( '.animate-left', {origin: 'left',distance: '50px'});sr.reveal( '.animate-right', {origin: 'right',distance: '50px'});sr.reveal( '.animate-late', {origin: 'bottom',scale:1.4,delay:100,duration:500});sr.reveal( '.animate-card', {origin: 'bottom',scale:1.1,delay:100,duration:500});</script>
+    <script>jQuery(document).ready(function(e){var c=e(".cd-auto-hide-header"),m=e(".cd-secondary-nav"),i=e(".sub-nav-hero"),f=c.height();var h=false,k=0,j=0,b=10,g=150;c.on("click",".nav-trigger",function(n){n.preventDefault();c.toggleClass("nav-open")});e(window).on("scroll",function(){if(!h){h=true;(!window.requestAnimationFrame)?setTimeout(l,250):requestAnimationFrame(l)}});e(window).on("resize",function(){f=c.height()});function l(){var n=e(window).scrollTop();(i.length>0)?d(n):a(n);k=n;h=false}function a(n){if(k-n>b){c.removeClass("is-hidden")}else{if(n-k>b&&n>g){c.addClass("is-hidden")}}}function d(o){var n=i.offset().top-m.height()-c.height();if(k>=o){if(o<n){c.removeClass("is-hidden");m.removeClass("fixed slide-up");i.removeClass("secondary-nav-fixed")}else{if(k-o>b){c.removeClass("is-hidden");m.removeClass("slide-up").addClass("fixed");i.addClass("secondary-nav-fixed")}}}else{if(o>n+g){c.addClass("is-hidden");m.addClass("fixed slide-up");i.addClass("secondary-nav-fixed")}else{if(o>n){c.removeClass("is-hidden");m.addClass("fixed").removeClass("slide-up");i.addClass("secondary-nav-fixed")}}}}});</script>
+
+</body>
+
+</html>
+

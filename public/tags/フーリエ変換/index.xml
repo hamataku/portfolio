@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>フーリエ変換 on Hamataku Lab</title>
+    <link>https://hamataku.netlify.com/tags/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B/</link>
+    <description>Recent content in フーリエ変換 on Hamataku Lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <copyright>© 2020- Hamataku Lab. All Rights Reserved.</copyright>
+    <lastBuildDate>Sat, 15 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://hamataku.netlify.com/tags/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Processingでフーリエ変換〜実践編〜</title>
+      <link>https://hamataku.netlify.com/post/fourier3/</link>
+      <pubDate>Sat, 15 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hamataku.netlify.com/post/fourier3/</guid>
+      <description>はじめに 前回、フーリエ変換について詳しく見てきましたが、「いまいちピンとこない」と言う方も多かったのではないでしょうか。 そんな方に、「なんと</description>
+    </item>
+    
+    <item>
+      <title>Processingでフーリエ変換〜導入編〜</title>
+      <link>https://hamataku.netlify.com/post/fourier1/</link>
+      <pubDate>Sat, 08 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hamataku.netlify.com/post/fourier1/</guid>
+      <description>はじめに 皆さんは 波 と聞いて何を思い浮かべますか？海岸に打ち寄せる波や、湖面に石を投げてできる波紋などでしょうか。これらは目に見える波で、山と</description>
+    </item>
+    
+  </channel>
+</rss>

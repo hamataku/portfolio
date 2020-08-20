@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>earphone on Hamataku Lab</title>
+    <link>https://hamataku.netlify.com/tags/earphone/</link>
+    <description>Recent content in earphone on Hamataku Lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <copyright>© 2020- Hamataku Lab. All Rights Reserved.</copyright>
+    <lastBuildDate>Sat, 07 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://hamataku.netlify.com/tags/earphone/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pythonで百均イヤホンを高音質化！</title>
+      <link>https://hamataku.netlify.com/post/earphone/</link>
+      <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hamataku.netlify.com/post/earphone/</guid>
+      <description>はじめに 簡潔に。百均イヤホンからいい音を流したい。 百均イヤホンを一度でも使ったことがある人ならわかると思いますが、どんな良音もAMラジオみた</description>
+    </item>
+    
+  </channel>
+</rss>

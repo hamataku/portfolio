@@ -27,7 +27,13 @@ label {
     color: #fff;
     background: #f8b075;
 }
-
+.index {
+    margin-top: 60px;
+}
+.quiz {
+    margin-top: 60px;
+    margin-top: 60px;
+}
 .index h1 {
     font-size: 50px;
     text-align: center;
@@ -50,6 +56,12 @@ label {
     border-bottom: solid 4px #627295;
     border-radius: 3px;
 }
+.modal-dialog{
+    margin-bottom: 0px !important;
+    padding: 20px;
+}
+
+
 
 .index a:active {
     /*ボタンを押したとき*/
@@ -86,6 +98,7 @@ label {
 }
 .row{
     width: 100%;
+    margin-left: 0px !important;
 }
 
 #question{
@@ -95,7 +108,7 @@ label {
 }
 
 label.btn {
-    padding: 18px 60px;
+    padding: 18px 40px;
     white-space: normal;
     -webkit-transform: scale(1.0);
     -moz-transform: scale(1.0);
@@ -105,7 +118,7 @@ label.btn {
     -o-transition-duration: .3s
 }
 
-label.btn:hover {
+label.btn:active {
     text-shadow: 0 3px 2px rgba(0, 0, 0, 0.4);
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
@@ -129,6 +142,10 @@ label .btn-label {
 
 label .glyphicon {
     top: 34%
+}
+
+.btn-span{
+    font-size: 20px;
 }
 
 .element-animation1 {
@@ -244,4 +261,25 @@ label .glyphicon {
 .btn-primary:active {
     background-color: #007bff !important;
     border-color: #007bff !important;
+}
+
+@media (max-width: 540px) {
+    #question{
+        font-size: 20px;
+    }
+    #qid{
+        margin-bottom: 30px;
+    }
+    #subject{
+        font-size: 20px;
+    }
+    .index h1{
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .modal-dialog{
+        padding-top: 40px;
+    }
 }

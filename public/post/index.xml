@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>活動記録 on Hamataku Lab</title>
+    <link>https://hamataku.netlify.com/post/</link>
+    <description>Recent content in 活動記録 on Hamataku Lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <copyright>© 2020- Hamataku Lab. All Rights Reserved.</copyright>
+    <lastBuildDate>Sat, 07 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://hamataku.netlify.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pythonで百均イヤホンを高音質化！</title>
+      <link>https://hamataku.netlify.com/post/earphone/</link>
+      <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hamataku.netlify.com/post/earphone/</guid>
+      <description>はじめに 簡潔に。百均イヤホンからいい音を流したい。 百均イヤホンを一度でも使ったことがある人ならわかると思いますが、どんな良音もAMラジオみた</description>
+    </item>
+    
+    <item>
+      <title>Processingでフーリエ変換〜実践編〜</title>
+      <link>https://hamataku.netlify.com/post/fourier3/</link>
+      <pubDate>Sat, 15 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hamataku.netlify.com/post/fourier3/</guid>
+      <description>はじめに 前回、フーリエ変換について詳しく見てきましたが、「いまいちピンとこない」と言う方も多かったのではないでしょうか。 そんな方に、「なんと</description>
+    </item>
+    
+    <item>
+      <title>Processingでフーリエ変換〜導入編〜</title>
+      <link>https://hamataku.netlify.com/post/fourier1/</link>
+      <pubDate>Sat, 08 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hamataku.netlify.com/post/fourier1/</guid>
+      <description>はじめに 皆さんは 波 と聞いて何を思い浮かべますか？海岸に打ち寄せる波や、湖面に石を投げてできる波紋などでしょうか。これらは目に見える波で、山と</description>
+    </item>
+    
+    <item>
+      <title>オムニホイールで全方向移動</title>
+      <link>https://hamataku.netlify.com/post/omni/</link>
+      <pubDate>Wed, 22 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hamataku.netlify.com/post/omni/</guid>
+      <description>はじめに この記事では今年製作したオムニホイールについて紹介したいと思います。 ※パンジャンドラムではありません オムニホイールとは？ まずはこの写</description>
+    </item>
+    
+    <item>
+      <title>二重振り子のシミュレーション</title>
+      <link>https://hamataku.netlify.com/post/pendu/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hamataku.netlify.com/post/pendu/</guid>
+      <description>二重振り子とは？？ 物理部らしいことしてみた 二重振り子はカオス現象ですが、運動方程式をラグランジアンに変換して、Runge–Kutta法で微分</description>
+    </item>
+    
+    <item>
+      <title>Processingでライフゲーム</title>
+      <link>https://hamataku.netlify.com/post/lifegame/</link>
+      <pubDate>Wed, 27 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hamataku.netlify.com/post/lifegame/</guid>
+      <description>きっかけ いつものように、物理部で数学の勉強してたのですが(ｵｲ)、そこにいた準部員の一人が「ライフゲームって知ってる？」と発言したことが発端</description>
+    </item>
+    
+    <item>
+      <title>自作ドローン製作記</title>
+      <link>https://hamataku.netlify.com/post/drone/</link>
+      <pubDate>Thu, 03 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hamataku.netlify.com/post/drone/</guid>
+      <description>高1の音展でドローンを自作したのですが、これまた記録等を全く残していなかったので、改めて紹介します。 きっかけ 総理官邸にドローンが落ちた事件以</description>
+    </item>
+    
+    <item>
+      <title>木製3Dプリンタ製作記</title>
+      <link>https://hamataku.netlify.com/post/3dp/</link>
+      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hamataku.netlify.com/post/3dp/</guid>
+      <description>きっかけ 夏の終わりの風物詩である読書感想文。僕はいつもiPadで作文の下書きを書いてからそれをノートに写すというスタイルで書いていたのですが</description>
+    </item>
+    
+  </channel>
+</rss>

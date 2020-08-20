@@ -47,7 +47,6 @@ function getCSV() {
     var cells = lines[i].split(",");
     if (cells.length !== 1) {
       cells.pop();
-      console.log(cells);
       csvData.push(cells);
     }
   }
@@ -151,7 +150,6 @@ function questionText(randsub, randnum) {
         let verbChoice =
           verbs[randnum][Math.floor(Math.random() * (verbs[0].length - 2)) + 2];
         for (let j = 0; j < i; j++) {
-          console.log([verbChoice, ans, labels[j].innerText]);
           if (verbChoice != ans) {
             if (verbChoice != labels[j].innerText) {
               labels[i].innerText = verbChoice;
@@ -161,6 +159,5 @@ function questionText(randsub, randnum) {
         }
       }
     }
-    console.log(i);
   }
 }
