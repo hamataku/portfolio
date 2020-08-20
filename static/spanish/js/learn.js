@@ -59,7 +59,7 @@ function buttonClick(th) {
 }
 
 function drawQuestion() {
-  qNumber.innerText = qid;
+  qNumber.innerText = "Q";
   let randsub = Math.floor(Math.random() * 6);
   let randnum = Math.floor(Math.random() * verbs.length);
 
