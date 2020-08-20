@@ -92,8 +92,8 @@ label {
 #qid {
     padding: 10px 10px;
     font-size: 15px;
-    margin-bottom: 50px;
-    margin-top: 6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
     border-radius: 20px;
@@ -285,6 +285,11 @@ label .glyphicon {
     }
     .index h1{
         font-size: 30px;
+    }
+}
+@media (min-width: 540px) {
+    #qid{
+        margin-top: 6px;
     }
 }
 
