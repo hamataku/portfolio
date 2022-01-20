@@ -6,6 +6,9 @@ draft = true
 image = ""
 math = false
 tags = ["STM32"]
-title = "STM32でソフトウェアからDFUを起動する"
+title = "STM32でソフトウェアからDFUを起動する方法"
 
 +++
+**はじめに**
+
+STM32に書き込む方法は数種類ある
