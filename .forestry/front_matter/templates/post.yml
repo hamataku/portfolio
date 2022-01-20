@@ -25,3 +25,4 @@ fields:
   label: comments
 pages:
 - content/post/itc-lms-slack.md
+- content/post/stm32-dfu.md
