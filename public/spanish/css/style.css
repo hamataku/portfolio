@@ -29,10 +29,13 @@ label {
 }
 .index {
     margin-top: 60px;
+    font-size: 16px !important;
 }
+
 .quiz {
     margin-top: 60px;
     margin-top: 60px;
+    font-size: 16px !important;
 }
 .index h1 {
     font-size: 50px;
@@ -58,7 +61,7 @@ label {
 }
 .modal-dialog{
     margin-bottom: 0px !important;
-    padding: 20px;
+    padding: 5px;
 }
 
 
@@ -90,8 +93,8 @@ label {
 #qid {
     padding: 10px 10px;
     font-size: 15px;
-    margin-bottom: 50px;
-    margin-top: 6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
     border-radius: 20px;
@@ -134,7 +137,7 @@ label .btn-label {
     position: absolute;
     left: 0;
     top: 0;
-    padding: 20px 10px;
+    padding: 24px 10px;
     background: rgba(0, 0, 0, .15);
     height: 100%;
     display:inline-block;
@@ -142,6 +145,11 @@ label .btn-label {
 
 label .glyphicon {
     top: 34%
+}
+
+.index label{
+    padding:5px;
+    margin: 5px;
 }
 
 .btn-span{
@@ -280,6 +288,11 @@ label .glyphicon {
         font-size: 30px;
     }
 }
+@media (min-width: 540px) {
+    #qid{
+        margin-top: 6px;
+    }
+}
 
 @media (min-width: 1024px) {
     .modal-dialog{
@@ -287,8 +300,4 @@ label .glyphicon {
     }
 }
 
-@media (min-width: 540px) {
-    body{
-        font-size: 16px !important;
-    }
-}
+

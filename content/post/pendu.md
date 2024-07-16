@@ -8,7 +8,7 @@ tags:
   - 力学
   - 二重振り子
 math: true
-comments: true
+
 draft: false
 
 ---

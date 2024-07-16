@@ -4,14 +4,9 @@ canonifyurls = true
 paginate = 8
 languageCode = "ja-jp"
 copyright = "© 2020- Hamataku Lab. All Rights Reserved."
-googleAnalytics = "UA-161164249-2" # delete or comment to disable Google Analytics JS generation
 hasCJKLanguage = "true"
 pygmentsCodefences = true
 pygmentsUseClasses = true
-disqusShortname = "hamataku-lab"
-
-[author]
-name = "hamataku"
 
 [related]
 threshold = 80
@@ -30,7 +25,7 @@ page  = "/:section/:filename/"
 post  = "/:section/:filename/"
 
 [params]
-  DateForm = "2006/1/2"#変えるな絶対！！呪文やこれは！！
+  DateForm = "2006/1/2"
   email = "hamatakugarbage@gmail.com"
   postSummariesFrontPage = 4 #Number of post summaries to show on front page, comment out to allow default(4)
   showReadTime = false #set to false to exclude read time from header of post

@@ -6,7 +6,7 @@ description: 数式を使って、フーリエ変換の仕組みを徹底解剖�
 tags:
   - フーリエ変換
 math: true
-comments: true
+
 draft: true
 ---
 

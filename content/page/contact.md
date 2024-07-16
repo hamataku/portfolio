@@ -1,5 +1,5 @@
 ---
-title: 連絡
+title: contact
 intro: false
 
 ---

@@ -7,7 +7,7 @@ tags: # 記事のタグ
   - python
   - earphone
 math: false # Latex(数式をきれいに書く記法)を使うかどうか
-comments: true # 記事末にコメント書き込みを許可するかどうか
+ # 記事末にコメント書き込みを許可するかどうか
 draft: false # trueで下書き(非公開)、falseで公開
 ---
 ## はじめに

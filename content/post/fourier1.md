@@ -6,7 +6,7 @@ description: 現代のあらゆる技術を支えているフーリエ変換に�
 tags:
   - フーリエ変換
 math: true
-comments: true
+
 draft: false
 ---
 

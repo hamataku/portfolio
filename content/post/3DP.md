@@ -6,7 +6,7 @@ description: 中3の時に3Dプリンタを自作したのですが、記録等�
 tags:
   - 3Dプリンタ
 math: false
-comments: true
+
 draft: false
 ---
 
